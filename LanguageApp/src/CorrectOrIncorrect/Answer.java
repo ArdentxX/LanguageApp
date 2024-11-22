@@ -21,7 +21,7 @@ public class Answer extends Questions {
             Points++;
             return "Correct";
         }
-        return "Incorrect";
+        return "Incorrect. Correct Answer: "+ correctanswer;
     }
 
 }
