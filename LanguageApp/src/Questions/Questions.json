@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "question": "Kot",
+        "type": "choice",
+        "options": ["dog", "cat", "bird"],
+        "correctanswer": "cat",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 2,
+        "question": "Dzień Dobry",
+        "correctanswer": "Good Morning",
+        "category": "Grammar"
+    }
+]
