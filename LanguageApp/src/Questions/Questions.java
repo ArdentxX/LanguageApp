@@ -17,14 +17,25 @@ public class Questions {
     protected List<String> options;
     protected String category;
     public Answer answer;
+    public String language;
 
     public Questions() {
         this.answer = new Answer();
+        this.language = "ENG";
+    }
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+    public String getLanguage() {
+        return language;
     }
 
-
-    public String chooseQuestion(String filePath) {
+    public String chooseQuestion() {
         ObjectMapper mapper = new ObjectMapper();
+        String filePath;
+        if (language.equals("KR")) {
+             filePath = "C:\\Users\\przem\\IdeaProjects\\LanguageApp1\\LanguageApp\\src\\Questions\\QuestionsKR.json";
+        }else{ filePath = "C:\\Users\\przem\\IdeaProjects\\LanguageApp1\\LanguageApp\\src\\Questions\\Questions.json";}
         try {
             List<Questions> questionsList = mapper.readValue(new File(filePath), new TypeReference<List<Questions>>() {});
             Random rand = new Random();
