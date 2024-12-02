@@ -2,13 +2,11 @@ package CorrectOrIncorrect;
 
 import Questions.Questions;
 
-public class Answer extends Questions {
+public class Answer {
     protected String getanswers;
-    protected int Points;
 
-    public Answer(String getanswers, String correctanswer) {
-        super(correctanswer);
-        this.getanswers = getanswers;
+
+    public Answer() {
     }
     public void setAnswer(String getanswers) {
         this.getanswers = getanswers;
@@ -16,12 +14,6 @@ public class Answer extends Questions {
     public String getAnswer() {
         return getanswers;
     }
-    public String isCorrect() {
-        if (correctanswer.replaceAll("\\s", "").equalsIgnoreCase(getanswers.replaceAll("\\s", ""))) {
-            Points++;
-            return "Correct";
-        }
-        return "Incorrect. Correct Answer: "+ correctanswer;
-    }
+
 
 }

@@ -1,4 +1,5 @@
 package Questions;
+import CorrectOrIncorrect.Answer;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -10,19 +11,17 @@ import java.util.Random;
 
 public class Questions {
     protected String question;
-    protected String correctanswer;
+    public String correctanswer;
     protected int id;
     protected String type;
     protected List<String> options;
     protected String category;
+    public Answer answer;
 
     public Questions() {
-        // Default constructor for Jackson
+        this.answer = new Answer();
     }
 
-    public Questions(String correctanswer) {
-        this.correctanswer = correctanswer;
-    }
 
     public String chooseQuestion(String filePath) {
         ObjectMapper mapper = new ObjectMapper();
@@ -32,6 +31,7 @@ public class Questions {
             // Wybierz losowe pytanie
             Random rand = new Random();
             Questions randomQuestion = questionsList.get(rand.nextInt(questionsList.size()));
+            this.correctanswer = randomQuestion.correctanswer;
             return randomQuestion.getQuestion();
         } catch (IOException e) {
             e.printStackTrace();
@@ -45,6 +45,16 @@ public class Questions {
 
     public void setQuestion(String question) {
         this.question = question;
+    }
+
+    public String isCorrect() {
+        if (correctanswer == null || answer.getAnswer() == null) {
+            return "Answer or correct answer is missing.";
+        }
+        if (correctanswer.replaceAll("\\s", "").equalsIgnoreCase(answer.getAnswer().replaceAll("\\s", ""))) {
+            return "Correct";
+        }
+        return "Incorrect. Correct Answer: " + correctanswer;
     }
 
     public String getCorrectanswer() {
@@ -86,4 +96,5 @@ public class Questions {
     public void setCategory(String category) {
         this.category = category;
     }
+
 }
