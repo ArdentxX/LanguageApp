@@ -10,6 +10,11 @@ public class Main {
         questionHandler.answer.setAnswer("goodmorning");
         System.out.println("User Answer: " + questionHandler.answer.getAnswer());
         System.out.println(questionHandler.isCorrect());
+        String randomQuestion2 = questionHandler.chooseQuestion(filePath);
+        System.out.println(randomQuestion2);
+        questionHandler.answer.setAnswer("goodmorning");
+        System.out.println("User Answer: " + questionHandler.answer.getAnswer());
+        System.out.println(questionHandler.isCorrect());
 
     }
 }
