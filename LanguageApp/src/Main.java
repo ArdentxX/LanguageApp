@@ -7,7 +7,7 @@ public class Main {
         String filePath = "C:\\Users\\przem\\IdeaProjects\\LanguageApp1\\LanguageApp\\src\\Questions\\Questions.json";
         String randomQuestion = questionHandler.chooseQuestion(filePath);
         System.out.println(randomQuestion);
-        questionHandler.answer.setAnswer("zat");
+        questionHandler.answer.setAnswer("goodmorning");
         System.out.println("User Answer: " + questionHandler.answer.getAnswer());
         System.out.println(questionHandler.isCorrect());
 

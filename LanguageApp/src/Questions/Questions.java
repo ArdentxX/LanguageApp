@@ -56,7 +56,7 @@ public class Questions {
         if (correctanswer.replaceAll("\\s", "").equalsIgnoreCase(answer.getAnswer().replaceAll("\\s", ""))) {
             return "Correct";
         }
-        return "Incorrect. Correct Answer: " + correctanswer;
+        return "Incorrect" +"\n"+"Correct Answer: " + correctanswer;
     }
 
     public String getCorrectanswer() {
