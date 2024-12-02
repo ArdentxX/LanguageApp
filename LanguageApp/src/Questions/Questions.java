@@ -26,12 +26,14 @@ public class Questions {
     public String chooseQuestion(String filePath) {
         ObjectMapper mapper = new ObjectMapper();
         try {
-            // Wczytaj pytania z pliku JSON
             List<Questions> questionsList = mapper.readValue(new File(filePath), new TypeReference<List<Questions>>() {});
-            // Wybierz losowe pytanie
             Random rand = new Random();
             Questions randomQuestion = questionsList.get(rand.nextInt(questionsList.size()));
             this.correctanswer = randomQuestion.correctanswer;
+            if(randomQuestion.options != null){
+                this.options = randomQuestion.options;
+                return randomQuestion.getQuestion() +"\n"+randomQuestion.options;
+            }
             return randomQuestion.getQuestion();
         } catch (IOException e) {
             e.printStackTrace();
