@@ -10,6 +10,7 @@
     {
         "id": 2,
         "question": "Dzień Dobry",
+        "type": "writting",
         "correctanswer": "안녕하세요",
         "category": "Grammar"
     },
@@ -32,12 +33,14 @@
     {
         "id": 5,
         "question": "Dobranoc",
+        "type": "writting",
         "correctanswer": "안녕히 주무세요",
         "category": "Grammar"
     },
     {
         "id": 6,
         "question": "Czy możesz mi pomóc?",
+        "type": "writting",
         "correctanswer": "저를 도와줄 수 있나요?",
         "category": "Grammar"
     },
@@ -68,12 +71,14 @@
     {
         "id": 10,
         "question": "Dziękuję",
+        "type": "writting",
         "correctanswer": "감사합니다",
         "category": "Grammar"
     },
     {
         "id": 11,
         "question": "Proszę",
+        "type": "writting",
         "correctanswer": "제발",
         "category": "Grammar"
     },
@@ -104,6 +109,7 @@
     {
         "id": 15,
         "question": "Gdzie jest toaleta?",
+        "type": "writting",
         "correctanswer": "화장실이 어디에 있나요?",
         "category": "Grammar"
     }

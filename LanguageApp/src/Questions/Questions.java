@@ -41,10 +41,13 @@ public class Questions {
             Random rand = new Random();
             Questions randomQuestion = questionsList.get(rand.nextInt(questionsList.size()));
             this.correctanswer = randomQuestion.correctanswer;
+            this.question = randomQuestion.question;
+            this.type = randomQuestion.type;
             if(randomQuestion.options != null){
                 this.options = randomQuestion.options;
                 return randomQuestion.getQuestion() +"\n"+randomQuestion.options;
             }
+
             return randomQuestion.getQuestion();
         } catch (IOException e) {
             e.printStackTrace();
