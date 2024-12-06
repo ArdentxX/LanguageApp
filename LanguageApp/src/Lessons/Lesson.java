@@ -34,7 +34,10 @@ public class Lesson {
             if(questions.isCorrect().equals("Correct")){
                 Result++;
             }
+            else{
+                System.out.print(questions.isCorrect());
+            }
         }
-        System.out.println("\nResult: " + Result/(Vocabulary + Grammar));
+        System.out.println("\nResult: " + Result+"/"+(Vocabulary + Grammar));
     }
 }

@@ -10,6 +10,7 @@
     {
         "id": 2,
         "question": "Dzień Dobry",
+        "type": "writting",
         "correctanswer": "Good Morning",
         "category": "Grammar"
     },
@@ -32,12 +33,14 @@
     {
         "id": 5,
         "question": "Dobranoc",
+        "type": "writting",
         "correctanswer": "Good Night",
         "category": "Grammar"
     },
     {
         "id": 6,
         "question": "Czy możesz mi pomóc?",
+        "type": "writting",
         "correctanswer": "Can you help me?",
         "category": "Grammar"
     },
@@ -68,12 +71,14 @@
     {
         "id": 10,
         "question": "Dziękuję",
+        "type": "writting",
         "correctanswer": "Thank you",
         "category": "Grammar"
     },
     {
         "id": 11,
         "question": "Proszę",
+        "type": "writting",
         "correctanswer": "Please",
         "category": "Grammar"
     },
@@ -104,6 +109,7 @@
     {
         "id": 15,
         "question": "Gdzie jest toaleta?",
+        "type": "writting",
         "correctanswer": "Where is the toilet?",
         "category": "Grammar"
     }
