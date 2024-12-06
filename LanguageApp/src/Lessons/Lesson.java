@@ -38,6 +38,6 @@ public class Lesson {
                 System.out.print(questions.isCorrect());
             }
         }
-        System.out.println("\nResult: " + Result+"/"+(Vocabulary + Grammar));
+        System.out.println("\nResult: " + Result/(Vocabulary + Grammar)*100+"%");
     }
 }
