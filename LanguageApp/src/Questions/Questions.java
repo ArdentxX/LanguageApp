@@ -34,8 +34,8 @@ public class Questions {
         ObjectMapper mapper = new ObjectMapper();
         String filePath;
         if (language.equals("KR")) {
-             filePath = "C:\\Users\\przem\\IdeaProjects\\LanguageApp1\\LanguageApp\\src\\Questions\\QuestionsKR.json";
-        }else{ filePath = "C:\\Users\\przem\\IdeaProjects\\LanguageApp1\\LanguageApp\\src\\Questions\\Questions.json";}
+             filePath = "C:\\Users\\biedr\\Desktop\\ThinkingInJava\\LanguageApp\\LanguageApp\\src\\Questions\\Questions.json";
+        }else{ filePath = "C:\\Users\\biedr\\Desktop\\ThinkingInJava\\LanguageApp\\LanguageApp\\src\\Questions\\Questions.json";}
         try {
             List<Questions> questionsList = mapper.readValue(new File(filePath), new TypeReference<List<Questions>>() {});
             Random rand = new Random();
