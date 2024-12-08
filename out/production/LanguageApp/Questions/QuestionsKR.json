@@ -1,0 +1,116 @@
+[
+    {
+        "id": 1,
+        "question": "Kot",
+        "type": "choice",
+        "options": ["개", "고양이", "새"],
+        "correctanswer": "고양이",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 2,
+        "question": "Dzień Dobry",
+        "type": "writting",
+        "correctanswer": "안녕하세요",
+        "category": "Grammar"
+    },
+    {
+        "id": 3,
+        "question": "Dom",
+        "type": "choice",
+        "options": ["집", "자동차", "나무"],
+        "correctanswer": "집",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 4,
+        "question": "Jabłko",
+        "type": "choice",
+        "options": ["바나나", "사과", "포도"],
+        "correctanswer": "사과",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 5,
+        "question": "Dobranoc",
+        "type": "writting",
+        "correctanswer": "안녕히 주무세요",
+        "category": "Grammar"
+    },
+    {
+        "id": 6,
+        "question": "Czy możesz mi pomóc?",
+        "type": "writting",
+        "correctanswer": "저를 도와줄 수 있나요?",
+        "category": "Grammar"
+    },
+    {
+        "id": 7,
+        "question": "Pies",
+        "type": "choice",
+        "options": ["개", "고양이", "쥐"],
+        "correctanswer": "개",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 8,
+        "question": "Książka",
+        "type": "choice",
+        "options": ["책", "펜", "종이"],
+        "correctanswer": "책",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 9,
+        "question": "Zielony",
+        "type": "choice",
+        "options": ["빨간색", "초록색", "파란색"],
+        "correctanswer": "초록색",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 10,
+        "question": "Dziękuję",
+        "type": "writting",
+        "correctanswer": "감사합니다",
+        "category": "Grammar"
+    },
+    {
+        "id": 11,
+        "question": "Proszę",
+        "type": "writting",
+        "correctanswer": "제발",
+        "category": "Grammar"
+    },
+    {
+        "id": 12,
+        "question": "Rzeka",
+        "type": "choice",
+        "options": ["호수", "강", "바다"],
+        "correctanswer": "강",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 13,
+        "question": "Woda",
+        "type": "choice",
+        "options": ["물", "주스", "우유"],
+        "correctanswer": "물",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 14,
+        "question": "Dziecko",
+        "type": "choice",
+        "options": ["아이", "부모", "선생님"],
+        "correctanswer": "아이",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 15,
+        "question": "Gdzie jest toaleta?",
+        "type": "writting",
+        "correctanswer": "화장실이 어디에 있나요?",
+        "category": "Grammar"
+    }
+]
