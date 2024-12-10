@@ -11,7 +11,7 @@ public class Unit {
        if(getUnitProgress()<6){
            lesson.MakeLesson();
            UnitProgress++;
-           System.out.println(UnitProgress + "/6");
+           System.out.println("Unit Progress: " +UnitProgress + "/6");
 
        }
 
