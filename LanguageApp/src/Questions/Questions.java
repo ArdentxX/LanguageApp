@@ -9,19 +9,25 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Random;
 
-public class Questions {
-    protected String question;
+public class Questions{
+    public String question;
     public String correctanswer;
-    protected int id;
-    protected String type;
-    protected List<String> options;
-    protected String category;
+    public int id;
+    public String type;
+    public List<String> options;
+    public String category;
     public Answer answer;
     public String language;
 
     public Questions() {
         this.answer = new Answer();
         this.language = "ENG";
+    }
+    public Questions(Questions original) {
+        this.question = original.question;
+        this.type = original.type;
+        this.options = original.options;
+        this.answer = new Answer(original.answer);
     }
     public void setLanguage(String language) {
         this.language = language;

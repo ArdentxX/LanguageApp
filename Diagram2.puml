@@ -1,0 +1,39 @@
+@startuml
+:User: as User
+:Front-end: as Front
+:Back-end: as Back
+:Database: as DB
+
+(Submit lesson request) as (LessonRequest)
+(Generate lesson) as (GenerateLesson)
+(Send answer) as (SendAnswer)
+(Check answer) as (CheckAnswer)
+
+User --> (LessonRequest)
+(LessonRequest) --> Front
+Front --> (GenerateLesson)
+(GenerateLesson) --> Back
+Back --> DB : Request questions
+DB --> Back : Send questions
+Back --> Front : Lesson data
+Front --> User : Start lesson
+User --> (SendAnswer)
+(SendAnswer) --> Front
+Front --> Back : Request answer check
+Back --> (CheckAnswer)
+(CheckAnswer) --> Back
+Back --> Front : Response
+Front --> User : Send response
+
+note right of Back
+The backend checks
+the user's answers
+and provides feedback.
+end note
+
+note bottom of DB
+Database contains the lesson
+questions and answers.
+end note
+
+@enduml
