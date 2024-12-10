@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class Lesson {
     public Questions questions;
+    public int Result;
 
     public Lesson() {
         this.questions = new Questions();
@@ -14,7 +15,8 @@ public class Lesson {
     public void MakeLesson() {
         int Vocabulary = 0;
         int Grammar = 0;
-        int Result= 0;
+        int LocRes= 0;
+        this.Result =LocRes;
         int MisSolve = 0;
         ArrayList<Questions> questionsList = new ArrayList<Questions>();
         String Answer = "";
@@ -35,7 +37,7 @@ public class Lesson {
                 Vocabulary++;
             }
             if(questions.isCorrect()){
-                Result++;
+                LocRes++;
                 System.out.println("Correct");
             }
             else{
@@ -47,6 +49,6 @@ public class Lesson {
 
 
         //}
-        System.out.println("\nResult: " + (100*Result)/(Vocabulary + Grammar)+"%");
+        System.out.println("\nResult: " + (100*LocRes)/(Vocabulary + Grammar)+"%");
     }
 }
