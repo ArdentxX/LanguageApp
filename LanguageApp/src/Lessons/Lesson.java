@@ -18,11 +18,17 @@ public class Lesson {
         int Grammar = 0;
         int LocRes= 0;
         int MisSolve = 0;
-        ArrayList<Questions> questionsList = new ArrayList<Questions>();
+        ArrayList<String> questionsList = new ArrayList<>();
+        ArrayList<Questions> mistakeList = new ArrayList<Questions>();
         String Answer = "";
         Scanner sc = new Scanner(System.in);
-        while (Vocabulary + Grammar < 2) {
-            questions.chooseQuestion();
+        while (Vocabulary + Grammar < 10) {
+                questions.chooseQuestion();
+                String questionCheck = questions.getQuestion();
+                if(questionsList.contains(questionCheck)) {
+                    continue;
+                }
+
             if (questions.getType().equals("choice")) {
                 System.out.print(questions.getQuestion() + "\n" + questions.getOptions());
                 System.out.println("\nPodaj Odpowiedz: ");
@@ -42,10 +48,11 @@ public class Lesson {
             }
             else{
                 System.out.print("Incorrect" +"\n"+"Correct Answer: " + questions.correctanswer+"\n");
-                questionsList.add(new Questions(questions));
+                mistakeList.add(new Questions(questions));
             }
+            questionsList.add(questions.getQuestion());
         }
-        //while(MisSolve < questionsList.size()){
+        //while(MisSolve < mistakeList.size()){
 
 
         //}
