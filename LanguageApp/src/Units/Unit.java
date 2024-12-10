@@ -6,6 +6,7 @@ public class Unit {
     public Lesson lesson;
    public Unit() {
        this.lesson = new Lesson();
+       this.UnitProgress = 0;
    }
    public void makeUnit(){
        if(getUnitProgress()<6){
