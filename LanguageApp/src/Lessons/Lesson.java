@@ -10,13 +10,13 @@ public class Lesson {
 
     public Lesson() {
         this.questions = new Questions();
+        this.Result = 0;
     }
 
     public void MakeLesson() {
         int Vocabulary = 0;
         int Grammar = 0;
         int LocRes= 0;
-        this.Result =LocRes;
         int MisSolve = 0;
         ArrayList<Questions> questionsList = new ArrayList<Questions>();
         String Answer = "";
@@ -49,6 +49,8 @@ public class Lesson {
 
 
         //}
-        System.out.println("\nResult: " + (100*LocRes)/(Vocabulary + Grammar)+"%");
+        int FinalResult = (100*LocRes)/(Vocabulary + Grammar);
+        System.out.println("\nResult: " + FinalResult +"%");
+        this.Result =FinalResult;
     }
 }
