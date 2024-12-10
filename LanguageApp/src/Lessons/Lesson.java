@@ -43,10 +43,10 @@ public class Lesson {
                 questionsList.add(new Questions(questions));
             }
         }
-        while(MisSolve < questionsList.size()){
+        //while(MisSolve < questionsList.size()){
 
 
-        }
+        //}
         System.out.println("\nResult: " + (100*Result)/(Vocabulary + Grammar)+"%");
     }
 }
