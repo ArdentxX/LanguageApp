@@ -39,7 +39,7 @@ public class Lesson {
                 System.out.println("Correct");
             }
             else{
-                System.out.print("Incorrect" +"\n"+"Correct Answer: " + questions.correctanswer);
+                System.out.print("Incorrect" +"\n"+"Correct Answer: " + questions.correctanswer+"\n");
                 questionsList.add(new Questions(questions));
             }
         }
