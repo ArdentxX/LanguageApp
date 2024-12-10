@@ -10,7 +10,7 @@ public class Unit {
    public void makeUnit(){
        if(getUnitProgress()<6){
            lesson.MakeLesson();
-           if(lesson.Result>50) {
+           if(lesson.Result>=50) {
                UnitProgress++;
                System.out.println("Unit Progress: " + UnitProgress + "/6");
            }
