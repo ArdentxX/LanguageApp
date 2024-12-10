@@ -59,5 +59,6 @@ public class Lesson {
         int FinalResult = (100*LocRes)/(Vocabulary + Grammar);
         System.out.println("\nResult: " + FinalResult +"%");
         this.Result =FinalResult;
+        questionsList.clear();
     }
 }
