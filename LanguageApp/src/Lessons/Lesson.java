@@ -34,15 +34,17 @@ public class Lesson {
                 questions.answer.setAnswer(Answer);
                 Vocabulary++;
             }
-            if(questions.isCorrect().equals("Correct")){
+            if(questions.isCorrect()){
                 Result++;
+                System.out.println("Correct");
             }
             else{
-                System.out.print(questions.isCorrect());
+                System.out.print("Incorrect" +"\n"+"Correct Answer: " + questions.correctanswer);
                 questionsList.add(new Questions(questions));
             }
         }
         while(MisSolve < questionsList.size()){
+
 
         }
         System.out.println("\nResult: " + (100*Result)/(Vocabulary + Grammar)+"%");

@@ -69,14 +69,14 @@ public class Questions{
         this.question = question;
     }
 
-    public String isCorrect() {
+    public boolean isCorrect() {
         if (correctanswer == null || answer.getAnswer() == null) {
-            return "Answer or correct answer is missing.";
+            return false;
         }
         if (correctanswer.replaceAll("\\s", "").equalsIgnoreCase(answer.getAnswer().replaceAll("\\s", ""))) {
-            return "Correct";
+            return true;
         }
-        return "Incorrect" +"\n"+"Correct Answer: " + correctanswer;
+        return false;
     }
 
     public String getCorrectanswer() {
