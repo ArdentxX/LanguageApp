@@ -1,5 +1,5 @@
 @startuml
-:User: as User
+:Login: as Login
 :Front-end: as Front
 :Back-end: as Back
 :Database: as DB
@@ -9,21 +9,21 @@
 (Send answer) as (SendAnswer)
 (Check answer) as (CheckAnswer)
 
-User --> (LessonRequest)
+Login --> (LessonRequest)
 (LessonRequest) --> Front
 Front --> (GenerateLesson)
 (GenerateLesson) --> Back
 Back --> DB : Request questions
 DB --> Back : Send questions
 Back --> Front : Lesson data
-Front --> User : Start lesson
-User --> (SendAnswer)
+Front --> Login : Start lesson
+Login --> (SendAnswer)
 (SendAnswer) --> Front
 Front --> Back : Request answer check
 Back --> (CheckAnswer)
 (CheckAnswer) --> Back
 Back --> Front : Response
-Front --> User : Send response
+Front --> Login : Send response
 
 note right of Back
 The backend checks
