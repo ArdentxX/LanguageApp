@@ -11,7 +11,7 @@ public class User {
         this.nazwisko = nazwisko;
     }
 
-    // Gettery i settery (opcjonalne, ale pomocne przy serializacji)
+    // Gettery i setery (opcjonalne, ale pomocne przy serializacji)
     public String getImie() {
         return imie;
     }
