@@ -1,30 +1,33 @@
 package User;
 
 public class User {
-    private String imie;
-    private String nazwisko;
-    private int wiek;
+    private String username;
+    private String password;
 
-    // Konstruktor z trzema argumentami
-    public User(String imie, String nazwisko) {
-        this.imie = imie;
-        this.nazwisko = nazwisko;
+
+    // Konstruktor
+    public User() {}
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
     }
 
-    // Gettery i setery (opcjonalne, ale pomocne przy serializacji)
-    public String getImie() {
-        return imie;
+
+    public String getUsername() {
+        return username;
+    }
+    public String getPassword() {
+        return password;
     }
 
-    public void setImie(String imie) {
-        this.imie = imie;
+    //settery zeby json mogł zapisac do obiektu
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getNazwisko() {
-        return nazwisko;
-    }
 
-    public void setNazwisko(String nazwisko) {
-        this.nazwisko = nazwisko;
-    }
 }

@@ -11,7 +11,6 @@ public class Main {
         //unit1.makeUnit();
 
         Login login = new Login();
-        login.getInfo();
         login.writeInfo();
 
     }
