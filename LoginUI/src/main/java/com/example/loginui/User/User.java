@@ -3,6 +3,11 @@ package com.example.loginui.User;
 public class User {
     private String username;
     private String password;
+    private int englishUnitCount;
+    private int koreanUnitCount;
+    private double correctEnglishAnswerPercentage;
+    private double correctKoreanAnswerPercentage;
+
 
 
     // Konstruktor
@@ -28,6 +33,31 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+    public int getEnglishUnitCount() {
+        return englishUnitCount;
+    }
+    public void setEnglishUnitCount(int englishUnitCount) {
+        this.englishUnitCount = englishUnitCount;
+    }
+    public int getKoreanUnitCount() {
+        return koreanUnitCount;
+    }
+    public void setKoreanUnitCount(int koreanUnitCount) {
+        this.koreanUnitCount = koreanUnitCount;
+    }
+    public double getCorrectEnglishAnswerPercentage() {
+        return correctEnglishAnswerPercentage;
+    }
+    public void setCorrectEnglishAnswerPercentage(double correctAnswerPercentage) {
+        this.correctEnglishAnswerPercentage = correctAnswerPercentage;
+    }
+    public double getCorrectKoreanAnswerPercentage() {
+        return correctKoreanAnswerPercentage;
+    }
+    public void setCorrectKoreanAnswerPercentage(double correctKoreanAnswerPercentage) {
+        this.correctKoreanAnswerPercentage = correctKoreanAnswerPercentage;
+    }
+
 
 
 }

@@ -2,10 +2,9 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginui.LoggedInController">
    <children>
@@ -14,13 +13,38 @@
             <AnchorPane prefHeight="66.0" prefWidth="602.0" BorderPane.alignment="CENTER">
                <children>
                   <Button fx:id="wylogujButton" layoutX="35.0" layoutY="21.0" mnemonicParsing="false" onAction="#onWylogujButton" text="Wyloguj sie" />
-                  <TextField fx:id="currentUserTextField" layoutX="420.0" layoutY="21.0" />
                   <Label layoutX="321.0" layoutY="24.0" text="Zalogowano jako" />
+                  <Label fx:id="usernameLabel" layoutX="441.0" layoutY="25.0" prefHeight="18.0" prefWidth="94.0" text="Label" />
                </children>
             </AnchorPane>
          </top>
          <center>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            <AnchorPane prefHeight="337.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="452.0" layoutY="21.0" prefHeight="35.0" prefWidth="121.0" text="Statystyki" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="404.0" layoutY="66.0" text="Angielski">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="420.0" layoutY="90.0" text="Ukonczone lekcje" />
+                  <Label layoutX="420.0" layoutY="116.0" text="Poprawne odpowiedzi" />
+                  <Label layoutX="406.0" layoutY="142.0" text="Koreanski">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="420.0" layoutY="168.0" text="Ukonczone lekcje" />
+                  <Label layoutX="420.0" layoutY="194.0" text="Poprawne odpowiedzi" />
+                  <Label fx:id="lessonsEngLabel" layoutX="552.0" layoutY="90.0" text="Label" />
+                  <Label fx:id="percentageEngLabel" layoutX="552.0" layoutY="116.0" text="Label" />
+                  <Label fx:id="lessonsKorLabel" layoutX="552.0" layoutY="168.0" text="Label" />
+                  <Label fx:id="percentageKorLabel" layoutX="552.0" layoutY="194.0" text="Label" />
+               </children></AnchorPane>
          </center>
       </BorderPane>
    </children>

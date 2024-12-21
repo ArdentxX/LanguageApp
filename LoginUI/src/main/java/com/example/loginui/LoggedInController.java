@@ -17,6 +17,12 @@ import java.io.IOException;
 public class LoggedInController extends HelloController {
     @FXML
     public TextField currentUserTextField;
+    public Label lessonsEngLabel;
+    public Label percentageEngLabel;
+    public Label lessonsKorLabel;
+    public Label percentageKorLabel;
+    @FXML
+    Label usernameLabel;
 
     private Stage stage;
     private Scene scene;
@@ -31,8 +37,11 @@ public class LoggedInController extends HelloController {
         stage.show();
     }
     public void displayInfo(User currentUser) {
-        currentUserTextField.setText(currentUser.getUsername());
-        System.out.println("Current username is: " + currentUser.getUsername());
+        usernameLabel.setText(currentUser.getUsername());
+        lessonsEngLabel.setText(String.valueOf(currentUser.getEnglishUnitCount()));
+        lessonsKorLabel.setText(String.valueOf(currentUser.getKoreanUnitCount()));
+        percentageEngLabel.setText(String.valueOf(currentUser.getCorrectEnglishAnswerPercentage()));
+        percentageKorLabel.setText(String.valueOf(currentUser.getCorrectKoreanAnswerPercentage()));
     }
 
     public void onWylogujButton(ActionEvent actionEvent) throws IOException {
