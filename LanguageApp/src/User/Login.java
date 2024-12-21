@@ -14,9 +14,14 @@ public class Login {
     String filePath;
     User user;
     File file;
+    ArrayList<User> users;
+    ObjectMapper mapper;
+    User currentUser;
     public Login() {
-        filePath="C:\\Users\\biedr\\Desktop\\ThinkingInJava\\LanguageApp\\LanguageApp\\src\\User\\users.json";
+        filePath="C:\\Users\\biedr\\IdeaProjects\\LanguageApp\\LanguageApp\\src\\User\\users.json";
         file = new File(filePath);
+        mapper = new ObjectMapper();
+        users = new ArrayList<User>();
     }
     public void getInfo() {
         // Pobieranie danych od użytkownika
@@ -28,9 +33,8 @@ public class Login {
 
         user = new User(username, password);
     }
-    public void writeInfo() {
-        ObjectMapper mapper = new ObjectMapper();
-        ArrayList<User> users = new ArrayList<User>();
+    public void registerUser() {
+
 
         try {
             // Odczytaj istniejącą listę użytkowników z pliku JSON
@@ -51,5 +55,32 @@ public class Login {
         } catch (IOException e) {
             System.err.println("Wystąpił błąd podczas zapisywania danych: " + e.getMessage());
         }
+    }
+    public void loginUser() {
+        try {
+            // Odczytaj istniejącą listę użytkowników z pliku JSON
+            users = mapper.readValue(file, new TypeReference<ArrayList<User>>() {});
+
+            // Pobieranie danych od użytkownika
+            getInfo();
+
+            for (User u : users) {
+                if (u.getUsername().equals(user.getUsername())) {
+                    if (u.getPassword().equals(user.getPassword())) {
+                        System.out.println("Zalogowano poprawnie!");
+                        currentUser = u;
+                        return;
+                    }
+                    System.out.println("Bledne haslo");
+                    return;
+                }
+            }
+            System.out.println("Nie znaleziono uzytkownika!");
+        } catch (IOException e) {
+            throw new RuntimeException("Wystąpił błąd podczas logowania: " + e.getMessage());
+        }
+    }
+    public void showCurrentUserInfo() {
+        System.out.println("Obecnie zalogowano jako " + currentUser.getUsername());
     }
 }

@@ -11,7 +11,9 @@ public class Main {
         //unit1.makeUnit();
 
         Login login = new Login();
-        login.writeInfo();
+        //login.registerUser();
+        login.loginUser();
+        //login.showCurrentUserInfo();
 
     }
 }
