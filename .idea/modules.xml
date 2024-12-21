@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LanguageApp/LanguageApp.iml" filepath="$PROJECT_DIR$/LanguageApp/LanguageApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/LanguageApp1.iml" filepath="$PROJECT_DIR$/.idea/LanguageApp1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LoginUI/LoginUI.iml" filepath="$PROJECT_DIR$/LoginUI/LoginUI.iml" />
     </modules>
   </component>
 </project>
