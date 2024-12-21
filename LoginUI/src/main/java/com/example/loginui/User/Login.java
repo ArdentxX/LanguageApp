@@ -85,4 +85,7 @@ public class Login {
     public String showCurrentUserInfo() {
         return currentUser.getUsername();
     }
+    public User getCurrentUser() {
+        return currentUser;
+    }
 }
