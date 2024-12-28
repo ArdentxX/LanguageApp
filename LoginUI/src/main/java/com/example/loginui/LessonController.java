@@ -89,9 +89,6 @@ public class LessonController {
         stage.show();
     }
 
-    public void setLogin(Login login) {
-        this.login = login;
-    }
 
     public void setUnit(Unit unit) {
         this.unit = unit;
