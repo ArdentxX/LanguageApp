@@ -21,7 +21,7 @@ Login --> (SendAnswer)
 (SendAnswer) --> Front
 Front --> Back : Request answer check
 Back --> (CheckAnswer)
-(CheckAnswer) --> Back
+(CheckAnswer) --> Backk
 Back --> Front : Response
 Front --> Login : Send response
 

@@ -15,6 +15,6 @@ Front->Back: Request answer check
 Back->DB: Check answer
 DB->Back: Send response
 Back->Front: Send response
-Front->Login: Send response
+Front->Login: Send responsee
 
 @enduml
