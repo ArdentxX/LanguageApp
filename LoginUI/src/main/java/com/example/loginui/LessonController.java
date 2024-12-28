@@ -57,9 +57,9 @@ public class LessonController {
         if (isCorrect) {
             progress += 1;
             progressBar.setProgress(progress / lesson.LessonSize);
-            feedbackLabel.setText("Correct!");
+            feedbackLabel.setText("Dobrze!");
         } else {
-            feedbackLabel.setText("Incorrect! Try again.");
+            feedbackLabel.setText("ŹLE! Dobra Odpowiedź: "+ lesson.questions.getCorrectanswer() );
         }
 
         answerTextField.clear();

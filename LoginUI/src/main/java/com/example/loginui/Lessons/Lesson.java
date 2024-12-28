@@ -40,5 +40,7 @@ public class Lesson {
     public boolean isLessonComplete() {
         return LessonProgress >= LessonSize;
     }
-
+    public String getQuestion() {
+        return questions.getQuestion();
+    }
 }
