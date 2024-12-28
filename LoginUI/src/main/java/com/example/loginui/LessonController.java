@@ -1,7 +1,7 @@
 package com.example.loginui;
 
-import com.example.loginui.Units.Unit;
-import com.example.loginui.User.Login;
+import com.example.loginui.Lessons.Lesson;
+import com.example.loginui.Questions.Questions;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +13,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import java.util.ArrayList;
 
 import java.io.IOException;
 
@@ -31,12 +32,13 @@ public class LessonController {
     private ProgressBar progressBar;
     @FXML
     private Button endLessonButton;
+    public ArrayList<String> LessonQuestions= new ArrayList<>();
 
-    private Unit unit;
+    private Lesson lesson;
     private double progress = 0;
 
     public LessonController() {
-        this.unit = new Unit();
+        this.lesson = new Lesson();
     }
 
     @FXML
@@ -51,10 +53,10 @@ public class LessonController {
     @FXML
     public void handleSubmitAnswer() {
         String answer = answerTextField.getText();
-        boolean isCorrect = unit.submitAnswer(answer);
+        boolean isCorrect = lesson.submitAnswer(answer);
         if (isCorrect) {
             progress += 1;
-            progressBar.setProgress(progress / 6);
+            progressBar.setProgress(progress / lesson.LessonSize);
             feedbackLabel.setText("Correct!");
         } else {
             feedbackLabel.setText("Incorrect! Try again.");
@@ -62,8 +64,8 @@ public class LessonController {
 
         answerTextField.clear();
 
-        if (unit.isUnitComplete()) {
-            questionLabel.setText("Lesson Complete! Final Score: " + unit.getFinalResult() + "%");
+        if (lesson.isLessonComplete()) {
+            questionLabel.setText("Lesson Complete!");
             submitAnswerButton.setDisable(true);
             answerTextField.setDisable(true);
             endLessonButton.setVisible(true);
@@ -74,7 +76,13 @@ public class LessonController {
     }
 
     private void showNextQuestion() {
-        questionLabel.setText(unit.getCurrentQuestion());
+        String question;
+        do {
+            question = Lesson.getCurrentQuestion();
+        } while (LessonQuestions.contains(question));
+
+        questionLabel.setText(question);
+        LessonQuestions.add(question);
     }
 
     public void onContinue(ActionEvent actionEvent) throws IOException {
@@ -89,10 +97,6 @@ public class LessonController {
         stage.show();
     }
 
-
-    public void setUnit(Unit unit) {
-        this.unit = unit;
-    }
 }
 
 

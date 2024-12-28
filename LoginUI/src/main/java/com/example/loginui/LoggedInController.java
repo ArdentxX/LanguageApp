@@ -1,5 +1,6 @@
 package com.example.loginui;
 
+import com.example.loginui.Questions.Questions;
 import com.example.loginui.User.Login;
 import com.example.loginui.User.User;
 import javafx.event.ActionEvent;
@@ -54,14 +55,12 @@ public class LoggedInController extends HelloController {
     }
     @FXML
     private void onKRStartbutton() {
-        // Otwórz okno lekcji koreańskiego
         closeCurrentWindow();
         loadFXMLWindow("LessonUi.fxml", "Lekcja Koreańskiego");
     }
 
     @FXML
     private void onENGStartbutton() {
-        // Otwórz okno lekcji angielskiego
         closeCurrentWindow();
         loadFXMLWindow("LessonUi.fxml", "Lekcja Angielskiego");
     }
