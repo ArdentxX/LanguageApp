@@ -1,33 +1,40 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 package com.example.loginui.Units;
 
 import com.example.loginui.Lessons.Lesson;
 
 public class Unit {
-    public int UnitProgress = 0;
-    public Lesson lesson = new Lesson();
+    private int unitProgress = 0;
+    private final Lesson lesson;
 
     public Unit() {
+        this.lesson = new Lesson();
     }
 
-    public void makeUnit() {
-        if (this.getUnitProgress() < 6) {
-            this.lesson.MakeLesson();
-            if (this.lesson.Result >= 50) {
-                ++this.UnitProgress;
-                System.out.println("Unit Progress: " + this.UnitProgress + "/6");
-            } else {
-                System.out.println("Try Again. Unit Progress: " + this.UnitProgress + "/6");
-            }
+    public String getCurrentQuestion() {
+        lesson.questions.chooseQuestion();
+        return lesson.questions.getQuestion();
+    }
+
+    public boolean submitAnswer(String answer) {
+        lesson.questions.answer.setAnswer(answer);
+        boolean isCorrect = lesson.questions.isCorrect();
+
+        if (isCorrect) {
+            unitProgress++;
         }
 
+        return isCorrect;
     }
 
     public int getUnitProgress() {
-        return this.UnitProgress;
+        return unitProgress;
+    }
+
+    public boolean isUnitComplete() {
+        return unitProgress >= 6;
+    }
+
+    public int getFinalResult() {
+        return lesson.Result;
     }
 }

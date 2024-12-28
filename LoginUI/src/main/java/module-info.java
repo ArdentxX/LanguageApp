@@ -11,6 +11,9 @@ module com.example.loginui {
 
     opens com.example.loginui to javafx.fxml;
     exports com.example.loginui;
+    exports com.example.loginui.Questions;
+    opens com.example.loginui.Questions to com.fasterxml.jackson.databind;
+    exports com.example.loginui.CorrectOrIncorrect to com.fasterxml.jackson.databind;
 
 
 }

@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -23,10 +24,14 @@ public class LoggedInController extends HelloController {
     public Label percentageKorLabel;
     @FXML
     Label usernameLabel;
+    @FXML
+    Button ENGStartbutton;
 
     private Stage stage;
     private Scene scene;
     private Parent root;
+    @FXML
+
 
 
     public void switchToLogin(ActionEvent event) throws IOException {
@@ -46,5 +51,37 @@ public class LoggedInController extends HelloController {
 
     public void onWylogujButton(ActionEvent actionEvent) throws IOException {
         switchToLogin(actionEvent);
+    }
+    @FXML
+    private void onKRStartbutton() {
+        // Otwórz okno lekcji koreańskiego
+        closeCurrentWindow();
+        loadFXMLWindow("LessonUi.fxml", "Lekcja Koreańskiego");
+    }
+
+    @FXML
+    private void onENGStartbutton() {
+        // Otwórz okno lekcji angielskiego
+        closeCurrentWindow();
+        loadFXMLWindow("LessonUi.fxml", "Lekcja Angielskiego");
+    }
+
+    private void closeCurrentWindow() {
+        // Pobierz bieżące okno i zamknij je
+        Stage stage = (Stage) ENGStartbutton.getScene().getWindow();
+        stage.close();
+    }
+
+    private void loadFXMLWindow(String fxmlFileName, String title) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFileName));
+            Parent root = fxmlLoader.load();
+            Stage newStage = new Stage();
+            newStage.setTitle(title);
+            newStage.setScene(new Scene(root));
+            newStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

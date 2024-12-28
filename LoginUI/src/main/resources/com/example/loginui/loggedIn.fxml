@@ -42,8 +42,8 @@
                   <Label fx:id="percentageEngLabel" layoutX="552.0" layoutY="116.0" text="Label" />
                   <Label fx:id="lessonsKorLabel" layoutX="552.0" layoutY="168.0" text="Label" />
                   <Label fx:id="percentageKorLabel" layoutX="552.0" layoutY="194.0" text="Label" />
-                  <Button fx:id="KRStartbutton" layoutX="20.0" layoutY="11.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="212.0" text="Rozpocznij Lekcję Koreańskiego" />
-                  <Button fx:id="ENGStartbutton" layoutX="20.0" layoutY="54.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="212.0" text="Rozpocznij Lekcję Angielskiego" />
+                  <Button fx:id="KRStartbutton" layoutX="20.0" layoutY="11.0" mnemonicParsing="false" onAction="#onKRStartbutton" prefHeight="25.0" prefWidth="212.0" text="Rozpocznij Lekcję Koreańskiego" />
+                  <Button fx:id="ENGStartbutton" layoutX="20.0" layoutY="54.0" mnemonicParsing="false" onAction="#onENGStartbutton" prefHeight="25.0" prefWidth="212.0" text="Rozpocznij Lekcję Angielskiego" />
                </children></AnchorPane>
          </left>
       </BorderPane>
