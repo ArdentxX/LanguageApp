@@ -47,9 +47,9 @@ public class Questions {
         ObjectMapper mapper = new ObjectMapper();
         String filePath;
         if (this.getLanguage().equals("KR")) {
-            filePath = "C:\\Users\\biedr\\IdeaProjects\\LanguageApp\\LanguageApp\\src\\Questions\\Questions.json";
+            filePath = "C:\\Users\\przem\\IdeaProjects\\LanguageApp7\\LoginUI\\src\\main\\java\\com\\example\\loginui\\Questions\\QuestionsKR.json";
         } else {
-            filePath = "C:\\Users\\biedr\\IdeaProjects\\LanguageApp\\LanguageApp\\src\\Questions\\Questions.json";
+            filePath = "C:\\Users\\przem\\IdeaProjects\\LanguageApp7\\LoginUI\\src\\main\\java\\com\\example\\loginui\\Questions\\Questions.json";
         }
 
         try {

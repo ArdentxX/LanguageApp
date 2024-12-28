@@ -18,7 +18,7 @@ public class Login {
     ObjectMapper mapper;
     User currentUser;
     public Login() {
-        filePath="C:\\Users\\biedr\\IdeaProjects\\LanguageApp\\LoginUI\\src\\main\\java\\com\\example\\loginui\\User\\users.json";
+        filePath="C:\\Users\\przem\\IdeaProjects\\LanguageApp7\\LoginUI\\src\\main\\java\\com\\example\\loginui\\User\\users.json";
         file = new File(filePath);
         mapper = new ObjectMapper();
         users = new ArrayList<User>();
