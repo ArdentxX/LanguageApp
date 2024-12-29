@@ -11,7 +11,7 @@ import com.example.loginui.Questions.Questions;
 public class Lesson {
     public static Questions questions;
     private int LessonProgress = 0;
-    public int LessonSize=10;
+    public int LessonSize=2;
 
     public Lesson() {
         this.questions = new Questions();

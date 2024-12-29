@@ -41,6 +41,11 @@ public class LessonControllerKR {
     private Stage stage;
     private Scene scene;
     private User user;
+    public int KRCount;
+    public double Correct;
+    public double InCorrect;
+    public int CorrectCount;
+    public int IncorrectCount;
 
     public LessonControllerKR() {
         this.lesson = new Lesson();
@@ -69,8 +74,14 @@ public class LessonControllerKR {
             progress += 1;
             progressBar.setProgress(progress / lesson.LessonSize);
             feedbackLabel.setText("Dobrze!");
+            this.Correct = user.getCorrectKoreanAnswer()+1;
+            user.setCorrectKoreanAnswer(Correct);
+            CorrectCount +=1;
         } else {
             feedbackLabel.setText("ŹLE! Dobra Odpowiedź: "+ lesson.questions.getCorrectanswer() );
+            this.InCorrect=user.getIncorrectKoreanAnswer()+1;
+            user.setIncorrectKoreanAnswer(InCorrect);
+            IncorrectCount +=1;
         }
 
         answerTextField.clear();
@@ -82,6 +93,8 @@ public class LessonControllerKR {
             endLessonButton.setVisible(true);
             endLessonButton.setManaged(true);
             LessonQuestions.clear();
+            this.KRCount = user.getKoreanUnitCount()+1;
+            user.setKoreanUnitCount(KRCount);
         } else {
             showNextQuestion();
         }
@@ -99,7 +112,9 @@ public class LessonControllerKR {
 
     public void onContinue(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("loggedIn.fxml"));
-        Parent root = loader.load(); // Ładowanie FXML
+        Parent root = loader.load();
+        user.setIncorrectKoreanAnswer(user.getIncorrectKoreanAnswer()-IncorrectCount);
+        user.setCorrectKoreanAnswer(user.getCorrectKoreanAnswer()-CorrectCount);
 
         // Pobranie kontrolera i przekazanie użytkownika
         LoggedInController controller = loader.getController();
@@ -113,5 +128,20 @@ public class LessonControllerKR {
         stage.show();
     }
 
+    public void onContinue2(ActionEvent actionEvent) throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("loggedIn.fxml"));
+        Parent root = loader.load();
+
+        // Pobranie kontrolera i przekazanie użytkownika
+        LoggedInController controller = loader.getController();
+        controller.setUser(user);
+
+        // Ustawienie sceny i pokazanie nowego okna
+        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setTitle("Stats");
+        stage.setScene(scene);
+        stage.show();
+    }
 }
 

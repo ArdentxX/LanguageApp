@@ -41,6 +41,11 @@ public class LessonController {
     private Scene scene;
     private Parent root;
     private User user;
+    public int ENGCount;
+    public double Correct;
+    public double InCorrect;
+    public int CorrectCount;
+    public int IncorrectCount;
 
     public LessonController() {
         this.lesson = new Lesson();
@@ -67,8 +72,14 @@ public class LessonController {
             progress += 1;
             progressBar.setProgress(progress / lesson.LessonSize);
             feedbackLabel.setText("Dobrze!");
+            this.Correct = user.getCorrectEnglishAnswer()+1;
+            user.setCorrectEnglishAnswer(Correct);
+            CorrectCount+=1;
         } else {
             feedbackLabel.setText("ŹLE! Dobra Odpowiedź: " + lesson.questions.getCorrectanswer());
+            this.InCorrect=user.getIncorrectEnglishAnswer()+1;
+            user.setIncorrectEnglishAnswer(InCorrect);
+            IncorrectCount+=1;
         }
 
         answerTextField.clear();
@@ -79,6 +90,8 @@ public class LessonController {
             answerTextField.setDisable(true);
             endLessonButton.setVisible(true);
             endLessonButton.setManaged(true);
+            this.ENGCount = user.getEnglishUnitCount()+1;
+            user.setEnglishUnitCount(ENGCount);
         } else {
             showNextQuestion();
         }
@@ -95,6 +108,24 @@ public class LessonController {
     }
 
     public void onContinue(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("loggedIn.fxml"));
+        Parent root = loader.load();
+        user.setIncorrectEnglishAnswer(user.getIncorrectEnglishAnswer()-IncorrectCount);
+        user.setCorrectEnglishAnswer(user.getCorrectEnglishAnswer()-CorrectCount);
+
+        // Pobranie kontrolera i przekazanie użytkownika
+        LoggedInController controller = loader.getController();
+        controller.setUser(user);
+
+        // Ustawienie sceny i pokazanie nowego okna
+        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setTitle("Stats");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void onContinue2(ActionEvent actionEvent) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("loggedIn.fxml"));
         Parent root = loader.load(); // Ładowanie FXML
 
