@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 
 import java.io.IOException;
+import java.util.EventObject;
 
 public class LessonControllerKR {
     @FXML
@@ -36,6 +37,8 @@ public class LessonControllerKR {
 
     private Lesson lesson;
     private double progress = 0;
+    private Stage stage;
+    private Scene scene;
 
     public LessonControllerKR() {
         this.lesson = new Lesson();
@@ -90,13 +93,9 @@ public class LessonControllerKR {
     }
 
     public void onContinue(ActionEvent actionEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("loggedIn.fxml"));
-        Parent root = loader.load();
-
-        LoggedInController loggedInController = loader.getController();
-
-        Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
+        Parent root = FXMLLoader.load(getClass().getResource("loggedIn.fxml"));
+        stage=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        scene=new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
