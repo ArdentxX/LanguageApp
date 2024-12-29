@@ -83,7 +83,9 @@ public class Questions {
 
     public boolean isCorrect() {
         if (this.correctanswer != null && this.answer.getAnswer() != null) {
-            return this.correctanswer.replaceAll("\\s", "").equalsIgnoreCase(this.answer.getAnswer().replaceAll("\\s", ""));
+            return this.correctanswer.replaceAll("[\\s\\p{Punct}]", "")
+                    .equalsIgnoreCase(this.answer.getAnswer().replaceAll("[\\s\\p{Punct}]", ""));
+
         } else {
             return false;
         }

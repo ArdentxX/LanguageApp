@@ -1,0 +1,116 @@
+[
+    {
+        "id": 1,
+        "question": "Kot",
+        "type": "choice",
+        "options": ["dog", "cat", "bird"],
+        "correctanswer": "cat",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 2,
+        "question": "Dzień Dobry",
+        "type": "writting",
+        "correctanswer": "Good Morning",
+        "category": "Grammar"
+    },
+    {
+        "id": 3,
+        "question": "Dom",
+        "type": "choice",
+        "options": ["house", "car", "tree"],
+        "correctanswer": "house",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 4,
+        "question": "Jabłko",
+        "type": "choice",
+        "options": ["banana", "apple", "grape"],
+        "correctanswer": "apple",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 5,
+        "question": "Dobranoc",
+        "type": "writting",
+        "correctanswer": "Good Night",
+        "category": "Grammar"
+    },
+    {
+        "id": 6,
+        "question": "Czy możesz mi pomóc?",
+        "type": "writting",
+        "correctanswer": "Can you help me?",
+        "category": "Grammar"
+    },
+    {
+        "id": 7,
+        "question": "Pies",
+        "type": "choice",
+        "options": ["dog", "cat", "mouse"],
+        "correctanswer": "dog",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 8,
+        "question": "Książka",
+        "type": "choice",
+        "options": ["book", "pen", "paper"],
+        "correctanswer": "book",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 9,
+        "question": "Zielony",
+        "type": "choice",
+        "options": ["red", "green", "blue"],
+        "correctanswer": "green",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 10,
+        "question": "Dziękuję",
+        "type": "writting",
+        "correctanswer": "Thank you",
+        "category": "Grammar"
+    },
+    {
+        "id": 11,
+        "question": "Proszę",
+        "type": "writting",
+        "correctanswer": "Please",
+        "category": "Grammar"
+    },
+    {
+        "id": 12,
+        "question": "Rzeka",
+        "type": "choice",
+        "options": ["lake", "river", "sea"],
+        "correctanswer": "river",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 13,
+        "question": "Woda",
+        "type": "choice",
+        "options": ["water", "juice", "milk"],
+        "correctanswer": "water",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 14,
+        "question": "Dziecko",
+        "type": "choice",
+        "options": ["child", "parent", "teacher"],
+        "correctanswer": "child",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 15,
+        "question": "Gdzie jest toaleta?",
+        "type": "writting",
+        "correctanswer": "Where is the toilet?",
+        "category": "Grammar"
+    }
+]
