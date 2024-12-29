@@ -1,105 +1,166 @@
 [
     {
         "id": 1,
-        "question": "Kot",
+        "question": "Mama",
         "type": "choice",
-        "options": ["개", "고양이", "새"],
-        "correctanswer": "고양이",
+        "options": ["어머니", "아버지", "여동생"],
+        "correctanswer": "어머니",
         "category": "Vocabulary"
     },
     {
         "id": 2,
-        "question": "Dzień Dobry",
-        "type": "writting",
-        "correctanswer": "안녕하세요",
-        "category": "Grammar"
+        "question": "Tata",
+        "type": "choice",
+        "options": ["형제", "아버지", "삼촌"],
+        "correctanswer": "아버지",
+        "category": "Vocabulary"
     },
     {
         "id": 3,
-        "question": "Dom",
+        "question": "Dzień Dobry",
         "type": "choice",
-        "options": ["집", "자동차", "나무"],
-        "correctanswer": "집",
-        "category": "Vocabulary"
+        "options": ["안녕하세요", "좋은 아침", "안녕히 주무세요"],
+        "correctanswer": "좋은 아침",
+        "category": "Greetings"
     },
     {
         "id": 4,
-        "question": "Jabłko",
+        "question": "Cześć",
         "type": "choice",
-        "options": ["바나나", "사과", "포도"],
-        "correctanswer": "사과",
-        "category": "Vocabulary"
+        "options": ["안녕", "안녕히 가세요", "감사합니다"],
+        "correctanswer": "안녕",
+        "category": "Greetings"
     },
     {
         "id": 5,
-        "question": "Dobranoc",
-        "type": "writting",
-        "correctanswer": "안녕히 주무세요",
-        "category": "Grammar"
-    },
-    {
-        "id": 6,
-        "question": "Czy możesz mi pomóc?",
-        "type": "writting",
-        "correctanswer": "저를 도와줄 수 있나요?",
-        "category": "Grammar"
-    },
-    {
-        "id": 7,
-        "question": "Pies",
+        "question": "Babcia",
         "type": "choice",
-        "options": ["개", "고양이", "쥐"],
-        "correctanswer": "개",
+        "options": ["할머니", "이모", "여동생"],
+        "correctanswer": "할머니",
         "category": "Vocabulary"
     },
     {
-        "id": 8,
-        "question": "Książka",
+        "id": 6,
+        "question": "Dziadek",
         "type": "choice",
-        "options": ["책", "펜", "종이"],
-        "correctanswer": "책",
+        "options": ["할아버지", "사촌", "형제"],
+        "correctanswer": "할아버지",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 7,
+        "question": "Dobranoc",
+        "type": "choice",
+        "options": ["좋은 저녁", "안녕히 주무세요", "좋은 아침"],
+        "correctanswer": "안녕히 주무세요",
+        "category": "Greetings"
+    },
+    {
+        "id": 8,
+        "question": "Siostra",
+        "type": "choice",
+        "options": ["여동생", "어머니", "이모"],
+        "correctanswer": "여동생",
         "category": "Vocabulary"
     },
     {
         "id": 9,
-        "question": "Zielony",
+        "question": "Brat",
         "type": "choice",
-        "options": ["빨간색", "초록색", "파란색"],
-        "correctanswer": "초록색",
+        "options": ["형제", "아버지", "삼촌"],
+        "correctanswer": "형제",
         "category": "Vocabulary"
     },
     {
         "id": 10,
-        "question": "Dziękuję",
-        "type": "writting",
-        "correctanswer": "감사합니다",
-        "category": "Grammar"
+        "question": "Zielony",
+        "type": "choice",
+        "options": ["빨강", "초록색", "파랑"],
+        "correctanswer": "초록색",
+        "category": "Colors"
     },
     {
         "id": 11,
-        "question": "Proszę",
-        "type": "writting",
-        "correctanswer": "제발",
-        "category": "Grammar"
+        "question": "Niebieski",
+        "type": "choice",
+        "options": ["노랑", "파란색", "검정"],
+        "correctanswer": "파란색",
+        "category": "Colors"
     },
     {
         "id": 12,
-        "question": "Rzeka",
+        "question": "Czerwony",
         "type": "choice",
-        "options": ["호수", "강", "바다"],
-        "correctanswer": "강",
-        "category": "Vocabulary"
+        "options": ["빨강", "주황", "분홍"],
+        "correctanswer": "빨강",
+        "category": "Colors"
     },
     {
         "id": 13,
-        "question": "Woda",
+        "question": "Dziękuję",
         "type": "choice",
-        "options": ["물", "주스", "우유"],
-        "correctanswer": "물",
-        "category": "Vocabulary"
+        "options": ["감사합니다", "부탁합니다", "미안합니다"],
+        "correctanswer": "감사합니다",
+        "category": "Greetings"
     },
     {
         "id": 14,
+        "question": "Proszę",
+        "type": "choice",
+        "options": ["감사합니다", "부탁합니다", "안녕히 가세요"],
+        "correctanswer": "부탁합니다",
+        "category": "Greetings"
+    },
+    {
+        "id": 15,
+        "question": "Czarny",
+        "type": "choice",
+        "options": ["하양", "검정", "회색"],
+        "correctanswer": "검정",
+        "category": "Colors"
+    },
+    {
+        "id": 16,
+        "question": "Wujek",
+        "type": "choice",
+        "options": ["삼촌", "아버지", "할아버지"],
+        "correctanswer": "삼촌",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 17,
+        "question": "Ciocia",
+        "type": "choice",
+        "options": ["이모", "어머니", "할머니"],
+        "correctanswer": "이모",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 18,
+        "question": "Żółty",
+        "type": "choice",
+        "options": ["노랑", "파랑", "주황"],
+        "correctanswer": "노랑",
+        "category": "Colors"
+    },
+    {
+        "id": 19,
+        "question": "Różowy",
+        "type": "choice",
+        "options": ["분홍", "보라", "빨강"],
+        "correctanswer": "분홍",
+        "category": "Colors"
+    },
+    {
+        "id": 20,
+        "question": "Witaj",
+        "type": "choice",
+        "options": ["환영합니다", "안녕히 가세요", "미안합니다"],
+        "correctanswer": "환영합니다",
+        "category": "Greetings"
+    },
+    {
+        "id": 21,
         "question": "Dziecko",
         "type": "choice",
         "options": ["아이", "부모", "선생님"],
@@ -107,10 +168,317 @@
         "category": "Vocabulary"
     },
     {
-        "id": 15,
-        "question": "Gdzie jest toaleta?",
-        "type": "writting",
-        "correctanswer": "화장실이 어디에 있나요?",
-        "category": "Grammar"
+        "id": 22,
+        "question": "Pomarańczowy",
+        "type": "choice",
+        "options": ["주황", "빨강", "노랑"],
+        "correctanswer": "주황",
+        "category": "Colors"
+    },
+    {
+        "id": 23,
+        "question": "Rodzina",
+        "type": "choice",
+        "options": ["가족", "친구", "이웃"],
+        "correctanswer": "가족",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 24,
+        "question": "Szary",
+        "type": "choice",
+        "options": ["검정", "회색", "하양"],
+        "correctanswer": "회색",
+        "category": "Colors"
+    },
+    {
+        "id": 25,
+        "question": "Przyjaciel",
+        "type": "choice",
+        "options": ["친구", "가족", "형제"],
+        "correctanswer": "친구",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 26,
+        "question": "Kuzyn",
+        "type": "choice",
+        "options": ["사촌", "형제", "삼촌"],
+        "correctanswer": "사촌",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 27,
+        "question": "Biały",
+        "type": "choice",
+        "options": ["하양", "검정", "회색"],
+        "correctanswer": "하양",
+        "category": "Colors"
+    },
+    {
+        "id": 28,
+        "question": "Siostrzeniec",
+        "type": "choice",
+        "options": ["조카", "삼촌", "형제"],
+        "correctanswer": "조카",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 29,
+        "question": "Siostrzenica",
+        "type": "choice",
+        "options": ["조카딸", "이모", "여동생"],
+        "correctanswer": "조카딸",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 30,
+        "question": "Dziękuję bardzo",
+        "type": "choice",
+        "options": ["정말 감사합니다", "안녕히 가세요", "부탁합니다"],
+        "correctanswer": "정말 감사합니다",
+        "category": "Greetings"
+    },
+    {
+        "id": 31,
+        "question": "어머니",
+        "type": "choice",
+        "options": ["Mama", "Tata", "Siostra"],
+        "correctanswer": "Mama",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 32,
+        "question": "아버지",
+        "type": "choice",
+        "options": ["Brat", "Tata", "Wujek"],
+        "correctanswer": "Tata",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 33,
+        "question": "좋은 아침",
+        "type": "choice",
+        "options": ["Dzień dobry", "Dobranoc", "Cześć"],
+        "correctanswer": "Dzień dobry",
+        "category": "Greetings"
+    },
+    {
+        "id": 34,
+        "question": "안녕",
+        "type": "choice",
+        "options": ["Cześć", "Do widzenia", "Dziękuję"],
+        "correctanswer": "Cześć",
+        "category": "Greetings"
+    },
+    {
+        "id": 35,
+        "question": "할머니",
+        "type": "choice",
+        "options": ["Babcia", "Ciocia", "Siostra"],
+        "correctanswer": "Babcia",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 36,
+        "question": "할아버지",
+        "type": "choice",
+        "options": ["Dziadek", "Kuzyn", "Brat"],
+        "correctanswer": "Dziadek",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 37,
+        "question": "안녕히 주무세요",
+        "type": "choice",
+        "options": ["Dobranoc", "Dzień dobry", "Dobry wieczór"],
+        "correctanswer": "Dobranoc",
+        "category": "Greetings"
+    },
+    {
+        "id": 38,
+        "question": "여동생",
+        "type": "choice",
+        "options": ["Siostra", "Mama", "Ciocia"],
+        "correctanswer": "Siostra",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 39,
+        "question": "형제",
+        "type": "choice",
+        "options": ["Brat", "Tata", "Wujek"],
+        "correctanswer": "Brat",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 40,
+        "question": "초록색",
+        "type": "choice",
+        "options": ["Zielony", "Czerwony", "Niebieski"],
+        "correctanswer": "Zielony",
+        "category": "Colors"
+    },
+    {
+        "id": 41,
+        "question": "파란색",
+        "type": "choice",
+        "options": ["Niebieski", "Żółty", "Czarny"],
+        "correctanswer": "Niebieski",
+        "category": "Colors"
+    },
+    {
+        "id": 42,
+        "question": "빨강",
+        "type": "choice",
+        "options": ["Czerwony", "Pomarańczowy", "Różowy"],
+        "correctanswer": "Czerwony",
+        "category": "Colors"
+    },
+    {
+        "id": 43,
+        "question": "감사합니다",
+        "type": "choice",
+        "options": ["Dziękuję", "Proszę", "Przepraszam"],
+        "correctanswer": "Dziękuję",
+        "category": "Greetings"
+    },
+    {
+        "id": 44,
+        "question": "부탁합니다",
+        "type": "choice",
+        "options": ["Proszę", "Dziękuję", "Do widzenia"],
+        "correctanswer": "Proszę",
+        "category": "Greetings"
+    },
+    {
+        "id": 45,
+        "question": "검정",
+        "type": "choice",
+        "options": ["Czarny", "Biały", "Szary"],
+        "correctanswer": "Czarny",
+        "category": "Colors"
+    },
+    {
+        "id": 46,
+        "question": "삼촌",
+        "type": "choice",
+        "options": ["Wujek", "Tata", "Dziadek"],
+        "correctanswer": "Wujek",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 47,
+        "question": "이모",
+        "type": "choice",
+        "options": ["Ciocia", "Mama", "Babcia"],
+        "correctanswer": "Ciocia",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 48,
+        "question": "노랑",
+        "type": "choice",
+        "options": ["Żółty", "Niebieski", "Pomarańczowy"],
+        "correctanswer": "Żółty",
+        "category": "Colors"
+    },
+    {
+        "id": 49,
+        "question": "분홍",
+        "type": "choice",
+        "options": ["Różowy", "Fioletowy", "Czerwony"],
+        "correctanswer": "Różowy",
+        "category": "Colors"
+    },
+    {
+        "id": 50,
+        "question": "환영합니다",
+        "type": "choice",
+        "options": ["Witaj", "Do widzenia", "Przepraszam"],
+        "correctanswer": "Witaj",
+        "category": "Greetings"
+    },
+    {
+        "id": 51,
+        "question": "아이",
+        "type": "choice",
+        "options": ["Dziecko", "Rodzic", "Nauczyciel"],
+        "correctanswer": "Dziecko",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 52,
+        "question": "주황",
+        "type": "choice",
+        "options": ["Pomarańczowy", "Czerwony", "Żółty"],
+        "correctanswer": "Pomarańczowy",
+        "category": "Colors"
+    },
+    {
+        "id": 53,
+        "question": "가족",
+        "type": "choice",
+        "options": ["Rodzina", "Przyjaciel", "Sąsiad"],
+        "correctanswer": "Rodzina",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 54,
+        "question": "회색",
+        "type": "choice",
+        "options": ["Szary", "Czarny", "Biały"],
+        "correctanswer": "Szary",
+        "category": "Colors"
+    },
+    {
+        "id": 55,
+        "question": "친구",
+        "type": "choice",
+        "options": ["Przyjaciel", "Rodzina", "Brat"],
+        "correctanswer": "Przyjaciel",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 56,
+        "question": "사촌",
+        "type": "choice",
+        "options": ["Kuzyn", "Brat", "Wujek"],
+        "correctanswer": "Kuzyn",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 57,
+        "question": "하양",
+        "type": "choice",
+        "options": ["Biały", "Czarny", "Szary"],
+        "correctanswer": "Biały",
+        "category": "Colors"
+    },
+    {
+        "id": 58,
+        "question": "조카",
+        "type": "choice",
+        "options": ["Siostrzeniec", "Wujek", "Brat"],
+        "correctanswer": "Siostrzeniec",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 59,
+        "question": "조카딸",
+        "type": "choice",
+        "options": ["Siostrzenica", "Ciocia", "Siostra"],
+        "correctanswer": "Siostrzenica",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 60,
+        "question": "정말 감사합니다",
+        "type": "choice",
+        "options": ["Dziękuję bardzo", "Do widzenia", "Proszę"],
+        "correctanswer": "Dziękuję bardzo",
+        "category": "Greetings"
     }
+
 ]
+
