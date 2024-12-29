@@ -1,7 +1,6 @@
 package com.example.loginui;
 
 import com.example.loginui.Lessons.Lesson;
-import com.example.loginui.Questions.Questions;
 import com.example.loginui.User.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,10 +13,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import java.util.ArrayList;
 
 import java.io.IOException;
-import java.util.EventObject;
+import java.util.ArrayList;
 
 public class LessonController {
     @FXML
@@ -34,17 +32,15 @@ public class LessonController {
     private ProgressBar progressBar;
     @FXML
     private Button endLessonButton;
-    public ArrayList<String> LessonQuestions= new ArrayList<>();
+
+    public ArrayList<String> LessonQuestions = new ArrayList<>();
 
     private Lesson lesson;
     private double progress = 0;
     private Stage stage;
     private Scene scene;
     private Parent root;
-    public String name;
-    public String password;
-    public User user;
-    private Button WyjscieButton;
+    private User user;
 
     public LessonController() {
         this.lesson = new Lesson();
@@ -58,6 +54,7 @@ public class LessonController {
         }
         showNextQuestion();
     }
+
     public void setUser(User currentUser) {
         this.user = currentUser;
     }
@@ -71,7 +68,7 @@ public class LessonController {
             progressBar.setProgress(progress / lesson.LessonSize);
             feedbackLabel.setText("Dobrze!");
         } else {
-            feedbackLabel.setText("ŹLE! Dobra Odpowiedź: "+ lesson.questions.getCorrectanswer() );
+            feedbackLabel.setText("ŹLE! Dobra Odpowiedź: " + lesson.questions.getCorrectanswer());
         }
 
         answerTextField.clear();
@@ -90,7 +87,7 @@ public class LessonController {
     private void showNextQuestion() {
         String question;
         do {
-            question = Lesson.getCurrentQuestion();
+            question = lesson.getCurrentQuestion();
         } while (LessonQuestions.contains(question));
 
         questionLabel.setText(question);
@@ -111,9 +108,4 @@ public class LessonController {
         stage.setScene(scene);
         stage.show();
     }
-
-
-
 }
-
-

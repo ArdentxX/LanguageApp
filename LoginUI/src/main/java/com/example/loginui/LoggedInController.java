@@ -1,8 +1,5 @@
 package com.example.loginui;
 
-import com.example.loginui.Lessons.Lesson;
-import com.example.loginui.Questions.Questions;
-import com.example.loginui.User.Login;
 import com.example.loginui.User.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,52 +9,54 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class LoggedInController extends HelloController {
     @FXML
-    public TextField currentUserTextField;
-    public Label lessonsEngLabel;
-    public Label percentageEngLabel;
-    public Label lessonsKorLabel;
-    public Label percentageKorLabel;
-    @FXML
     public Label usernameLabel;
     @FXML
+    public Label lessonsEngLabel;
+    @FXML
+    public Label percentageEngLabel;
+    @FXML
+    public Label lessonsKorLabel;
+    @FXML
+    public Label percentageKorLabel;
+    @FXML
     Button ENGStartbutton;
+    @FXML
+    Button KRStartbutton;
 
     private Stage stage;
     private Scene scene;
     private Parent root;
-    public User currentUser;
-    public User user;
+    private User currentUser;
 
     @FXML
-
-
-
     public void switchToLogin(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
-        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
-        scene=new Scene(root);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
+
     public void displayInfo(User currentUser) {
         usernameLabel.setText(currentUser.getUsername());
         lessonsEngLabel.setText(String.valueOf(currentUser.getEnglishUnitCount()));
         lessonsKorLabel.setText(String.valueOf(currentUser.getKoreanUnitCount()));
         percentageEngLabel.setText(String.valueOf(currentUser.getCorrectEnglishAnswer()));
         percentageKorLabel.setText(String.valueOf(currentUser.getCorrectKoreanAnswer()));
-        this.currentUser=currentUser;
+        this.currentUser = currentUser;
     }
 
+    @FXML
     public void onWylogujButton(ActionEvent actionEvent) throws IOException {
         switchToLogin(actionEvent);
     }
+
     @FXML
     private void onKRStartbutton() {
         try {
@@ -96,51 +95,59 @@ public class LoggedInController extends HelloController {
         }
     }
 
-
     private void closeCurrentWindow() {
         Stage stage = (Stage) ENGStartbutton.getScene().getWindow();
         stage.close();
     }
+
     public void setUser(User user) {
-        this.user=user;
+        this.currentUser = user;
         usernameLabel.setText(user.getUsername());
         lessonsEngLabel.setText(String.valueOf(user.getEnglishUnitCount()));
         lessonsKorLabel.setText(String.valueOf(user.getKoreanUnitCount()));
-        if(user.getCorrectEnglishAnswer()==0 && user.getIncorrectEnglishAnswer()==0){
-            percentageEngLabel.setText(String.valueOf(0));
-        }else{
-            percentageEngLabel.setText(String.valueOf(user.getCorrectEnglishAnswer()/(user.getCorrectEnglishAnswer()+ user.getIncorrectEnglishAnswer())));
-        }
-        if(user.getCorrectKoreanAnswer()==0 && user.getIncorrectKoreanAnswer()==0){
-            percentageKorLabel.setText(String.valueOf(0));
-        }else{
-        percentageKorLabel.setText(String.valueOf(user.getCorrectKoreanAnswer()/(user.getIncorrectKoreanAnswer()+getCorrectKoreanAnswer())));
+
+        if (user.getCorrectEnglishAnswer() == 0 && user.getIncorrectEnglishAnswer() == 0) {
+            percentageEngLabel.setText("0");
+        } else {
+            percentageEngLabel.setText(String.valueOf(user.getCorrectEnglishAnswer() / (user.getCorrectEnglishAnswer() + user.getIncorrectEnglishAnswer())));
         }
 
+        if (user.getCorrectKoreanAnswer() == 0 && user.getIncorrectKoreanAnswer() == 0) {
+            percentageKorLabel.setText("0");
+        } else {
+            percentageKorLabel.setText(String.valueOf(user.getCorrectKoreanAnswer() / (user.getIncorrectKoreanAnswer() + user.getCorrectKoreanAnswer())));
+        }
     }
+
     public User getUser() {
-        return user;
-    }
-    public String getUsername(){
-        return user.username;
-    }
-    public int getEnglishUnitCount() {
-        return currentUser.englishUnitCount;
-    }
-    public int getKoreanUnitCount() {
-        return currentUser.koreanUnitCount;
-    }
-    public double getCorrectEnglishAnswer() {
-        return currentUser.correctEnglishAnswer;
-    }
-    public double getCorrectKoreanAnswer() {
-        return currentUser.correctKoreanAnswer;
-    }
-    public double getincorrectEnglishAnswer(){
-        return currentUser.incorrectEnglishAnswer;
-    }
-    public double getincorrectKoreanAnswer(){
-        return currentUser.incorrectKoreanAnswer;
+        return currentUser;
     }
 
+    public String getUsername() {
+        return currentUser.getUsername();
+    }
+
+    public int getEnglishUnitCount() {
+        return currentUser.getEnglishUnitCount();
+    }
+
+    public int getKoreanUnitCount() {
+        return currentUser.getKoreanUnitCount();
+    }
+
+    public double getCorrectEnglishAnswer() {
+        return currentUser.getCorrectEnglishAnswer();
+    }
+
+    public double getCorrectKoreanAnswer() {
+        return currentUser.getCorrectKoreanAnswer();
+    }
+
+    public double getIncorrectEnglishAnswer() {
+        return currentUser.getIncorrectEnglishAnswer();
+    }
+
+    public double getIncorrectKoreanAnswer() {
+        return currentUser.getIncorrectKoreanAnswer();
+    }
 }
