@@ -1,21 +1,29 @@
 package com.example.loginui.User;
 
 public class User {
-    private String username;
+    public String username;
     private String password;
-    private int englishUnitCount;
-    private int koreanUnitCount;
-    private double correctEnglishAnswerPercentage;
-    private double correctKoreanAnswerPercentage;
+    public int englishUnitCount;
+    public int koreanUnitCount;
+    public double correctEnglishAnswer;
+    public double correctKoreanAnswer;
+    public double incorrectEnglishAnswer;
+    public double incorrectKoreanAnswer;
 
 
 
     // Konstruktor
     public User() {}
 
-    public User(String username, String password) {
+    public User(String username, String password,int englishUnitCount,int koreanUnitCount, double correctEnglishAnswer, double correctKoreanAnswer, double incorrectEnglishAnswer, double incorrectKoreanAnswer ) {
         this.username = username;
         this.password = password;
+        this.englishUnitCount = englishUnitCount;
+        this.koreanUnitCount = koreanUnitCount;
+        this.correctEnglishAnswer = correctEnglishAnswer;
+        this.correctKoreanAnswer = correctKoreanAnswer;
+        this.incorrectEnglishAnswer = incorrectEnglishAnswer;
+        this.incorrectKoreanAnswer = incorrectKoreanAnswer;
     }
 
 
@@ -45,18 +53,31 @@ public class User {
     public void setKoreanUnitCount(int koreanUnitCount) {
         this.koreanUnitCount = koreanUnitCount;
     }
-    public double getCorrectEnglishAnswerPercentage() {
-        return correctEnglishAnswerPercentage;
+    public double getCorrectEnglishAnswer() {
+        return correctEnglishAnswer;
     }
-    public void setCorrectEnglishAnswerPercentage(double correctAnswerPercentage) {
-        this.correctEnglishAnswerPercentage = correctAnswerPercentage;
+    public void setCorrectEnglishAnswer(double correctAnswer) {
+        this.correctEnglishAnswer = correctAnswer;
     }
-    public double getCorrectKoreanAnswerPercentage() {
-        return correctKoreanAnswerPercentage;
+    public double getCorrectKoreanAnswer() {
+        return correctKoreanAnswer;
     }
-    public void setCorrectKoreanAnswerPercentage(double correctKoreanAnswerPercentage) {
-        this.correctKoreanAnswerPercentage = correctKoreanAnswerPercentage;
+    public void setCorrectKoreanAnswer(double correctKoreanAnswer) {
+        this.correctKoreanAnswer = correctKoreanAnswer;
     }
+    public double getIncorrectEnglishAnswer() {
+        return incorrectEnglishAnswer;
+    }
+    public void setIncorrectEnglishAnswer(double incorrectEnglishAnswer) {
+        this.incorrectEnglishAnswer = incorrectEnglishAnswer;
+    }
+    public double getIncorrectKoreanAnswer() {
+        return incorrectKoreanAnswer;
+    }
+    public void setIncorrectKoreanAnswer(double incorrectKoreanAnswer) {
+        this.incorrectKoreanAnswer = incorrectKoreanAnswer;
+    }
+
 
 
 

@@ -2,6 +2,7 @@ package com.example.loginui;
 
 import com.example.loginui.Lessons.Lesson;
 import com.example.loginui.Questions.Questions;
+import com.example.loginui.User.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -39,6 +40,7 @@ public class LessonControllerKR {
     private double progress = 0;
     private Stage stage;
     private Scene scene;
+    private User user;
 
     public LessonControllerKR() {
         this.lesson = new Lesson();
@@ -54,6 +56,9 @@ public class LessonControllerKR {
         lesson.questions.setLanguage("KR");
         showNextQuestion();
 
+    }
+    public void setUser(User currentUser) {
+        this.user = currentUser;
     }
 
     @FXML
@@ -93,9 +98,16 @@ public class LessonControllerKR {
     }
 
     public void onContinue(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("loggedIn.fxml"));
-        stage=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        scene=new Scene(root);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("loggedIn.fxml"));
+        Parent root = loader.load(); // Ładowanie FXML
+
+        // Pobranie kontrolera i przekazanie użytkownika
+        LoggedInController controller = loader.getController();
+        controller.setUser(user);
+
+        // Ustawienie sceny i pokazanie nowego okna
+        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }

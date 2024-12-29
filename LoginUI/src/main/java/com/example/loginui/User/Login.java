@@ -32,7 +32,7 @@ public class Login {
         System.out.println("Podaj haslo:");
         String password = scanner.nextLine();
 
-        user = new User(username, password);
+        user = new User(username, password,0,0,0,0,0,0);
     }
     //metoda rejestracji, String username i password podawane w polach tekstowych w UI
     //zwraca 0 gdy utworzono poprawnie, -1 gdy uzytkownik istnieje
@@ -41,7 +41,7 @@ public class Login {
             // Odczytaj istniejącą listę użytkowników z pliku JSON
             users=mapper.readValue(file, new TypeReference<ArrayList<User>>(){});
             boolean userExists = false;
-            user=new User(username,password);
+            user=new User(username,password,0,0,0,0,0,0);
             userExists = users.stream().anyMatch(u -> u.getUsername().equals(user.getUsername()));
             if(userExists) {
                 System.out.println("Nazwa zajeta!");

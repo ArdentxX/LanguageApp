@@ -1,1 +1,62 @@
-[{"username":"Radek","password":"123"},{"username":"test","password":"test"},{"username":"testtest","password":"123"},{"username":"RadekTEst","password":"123"},{"username":"RAdek","password":"123"},{"username":"piotr","password":"321"}]
+[
+  {
+    "username": "Radek",
+    "password": "123",
+    "englishUnitCount": 0,
+    "koreanUnitCount": 0,
+    "correctEnglishAnswer": 0,
+    "correctKoreanAnswer": 0,
+    "incorrectEnglishAnswer": 0,
+    "incorrectKoreanAnswer": 0
+  },
+  {
+    "username": "test",
+    "password": "test",
+    "englishUnitCount": 0,
+    "koreanUnitCount": 0,
+    "correctEnglishAnswer": 0,
+    "correctKoreanAnswer": 0,
+    "incorrectEnglishAnswer": 0,
+    "incorrectKoreanAnswer": 0
+  },
+  {
+    "username": "testtest",
+    "password": "123",
+    "englishUnitCount": 0,
+    "koreanUnitCount": 0,
+    "correctEnglishAnswer": 0,
+    "correctKoreanAnswer": 0,
+    "incorrectEnglishAnswer": 0,
+    "incorrectKoreanAnswer": 0
+  },
+  {
+    "username": "RadekTEst",
+    "password": "123",
+    "englishUnitCount": 0,
+    "koreanUnitCount": 0,
+    "correctEnglishAnswer": 0,
+    "correctKoreanAnswer": 0,
+    "incorrectEnglishAnswer": 0,
+    "incorrectKoreanAnswer": 0
+  },
+  {
+    "username": "RAdek",
+    "password": "123",
+    "englishUnitCount": 0,
+    "koreanUnitCount": 0,
+    "correctEnglishAnswer": 0,
+    "correctKoreanAnswer": 0,
+    "incorrectEnglishAnswer": 0,
+    "incorrectKoreanAnswer": 0
+  },
+  {
+    "username": "piotr",
+    "password": "321",
+    "englishUnitCount": 0,
+    "koreanUnitCount": 0,
+    "correctEnglishAnswer": 0,
+    "correctKoreanAnswer": 0,
+    "incorrectEnglishAnswer": 0,
+    "incorrectKoreanAnswer": 0
+  }
+]

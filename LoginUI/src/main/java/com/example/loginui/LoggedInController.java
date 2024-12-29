@@ -25,13 +25,16 @@ public class LoggedInController extends HelloController {
     public Label lessonsKorLabel;
     public Label percentageKorLabel;
     @FXML
-    Label usernameLabel;
+    public Label usernameLabel;
     @FXML
     Button ENGStartbutton;
 
     private Stage stage;
     private Scene scene;
     private Parent root;
+    public User currentUser;
+    public User user;
+
     @FXML
 
 
@@ -47,8 +50,9 @@ public class LoggedInController extends HelloController {
         usernameLabel.setText(currentUser.getUsername());
         lessonsEngLabel.setText(String.valueOf(currentUser.getEnglishUnitCount()));
         lessonsKorLabel.setText(String.valueOf(currentUser.getKoreanUnitCount()));
-        percentageEngLabel.setText(String.valueOf(currentUser.getCorrectEnglishAnswerPercentage()));
-        percentageKorLabel.setText(String.valueOf(currentUser.getCorrectKoreanAnswerPercentage()));
+        percentageEngLabel.setText(String.valueOf(currentUser.getCorrectEnglishAnswer()));
+        percentageKorLabel.setText(String.valueOf(currentUser.getCorrectKoreanAnswer()));
+        this.currentUser=currentUser;
     }
 
     public void onWylogujButton(ActionEvent actionEvent) throws IOException {
@@ -56,32 +60,87 @@ public class LoggedInController extends HelloController {
     }
     @FXML
     private void onKRStartbutton() {
-        closeCurrentWindow();
-        loadFXMLWindow("LessonUiKR.fxml", "Lekcja Koreańskiego");
-    }
-
-    @FXML
-    private void onENGStartbutton() {
-        closeCurrentWindow();
-        loadFXMLWindow("LessonUi.fxml", "Lekcja Angielskiego");
-    }
-
-    private void closeCurrentWindow() {
-        // Pobierz bieżące okno i zamknij je
-        Stage stage = (Stage) ENGStartbutton.getScene().getWindow();
-        stage.close();
-    }
-
-    private void loadFXMLWindow(String fxmlFileName, String title) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFileName));
-            Parent root = fxmlLoader.load();
-            Stage newStage = new Stage();
-            newStage.setTitle(title);
-            newStage.setScene(new Scene(root));
-            newStage.show();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("LessonUiKR.fxml"));
+            Parent root = loader.load();
+            LessonControllerKR lessonController = loader.getController();
+
+            lessonController.setUser(currentUser);
+
+            closeCurrentWindow();
+            Stage stage = new Stage();
+            stage.setTitle("Lekcja Koreańskiego");
+            stage.setScene(new Scene(root));
+            stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    public void onENGStartbutton() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("LessonUi.fxml"));
+            Parent root = loader.load();
+            LessonController lessonController = loader.getController();
+
+            lessonController.setUser(currentUser);
+
+            closeCurrentWindow();
+            Stage stage = new Stage();
+            stage.setTitle("Lekcja Angielskiego");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    private void closeCurrentWindow() {
+        Stage stage = (Stage) ENGStartbutton.getScene().getWindow();
+        stage.close();
+    }
+    public void setUser(User user) {
+        this.user=user;
+        usernameLabel.setText(user.getUsername());
+        lessonsEngLabel.setText(String.valueOf(user.getEnglishUnitCount()));
+        lessonsKorLabel.setText(String.valueOf(user.getKoreanUnitCount()));
+        if(user.getCorrectEnglishAnswer()==0 && user.getIncorrectEnglishAnswer()==0){
+            percentageEngLabel.setText(String.valueOf(0));
+        }else{
+            percentageEngLabel.setText(String.valueOf(user.getCorrectEnglishAnswer()/(user.getCorrectEnglishAnswer()+ user.getIncorrectEnglishAnswer())));
+        }
+        if(user.getCorrectKoreanAnswer()==0 && user.getIncorrectKoreanAnswer()==0){
+            percentageKorLabel.setText(String.valueOf(0));
+        }else{
+        percentageKorLabel.setText(String.valueOf(user.getCorrectKoreanAnswer()/(user.getIncorrectKoreanAnswer()+getCorrectKoreanAnswer())));
+        }
+
+    }
+    public User getUser() {
+        return user;
+    }
+    public String getUsername(){
+        return user.username;
+    }
+    public int getEnglishUnitCount() {
+        return currentUser.englishUnitCount;
+    }
+    public int getKoreanUnitCount() {
+        return currentUser.koreanUnitCount;
+    }
+    public double getCorrectEnglishAnswer() {
+        return currentUser.correctEnglishAnswer;
+    }
+    public double getCorrectKoreanAnswer() {
+        return currentUser.correctKoreanAnswer;
+    }
+    public double getincorrectEnglishAnswer(){
+        return currentUser.incorrectEnglishAnswer;
+    }
+    public double getincorrectKoreanAnswer(){
+        return currentUser.incorrectKoreanAnswer;
+    }
+
 }
