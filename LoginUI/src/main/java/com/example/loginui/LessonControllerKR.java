@@ -73,6 +73,7 @@ public class LessonControllerKR {
             answerTextField.setDisable(true);
             endLessonButton.setVisible(true);
             endLessonButton.setManaged(true);
+            LessonQuestions.clear();
         } else {
             showNextQuestion();
         }
