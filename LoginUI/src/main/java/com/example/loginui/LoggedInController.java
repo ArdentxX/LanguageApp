@@ -1,5 +1,6 @@
 package com.example.loginui;
 
+import com.example.loginui.Lessons.Lesson;
 import com.example.loginui.Questions.Questions;
 import com.example.loginui.User.Login;
 import com.example.loginui.User.User;
@@ -56,7 +57,7 @@ public class LoggedInController extends HelloController {
     @FXML
     private void onKRStartbutton() {
         closeCurrentWindow();
-        loadFXMLWindow("LessonUi.fxml", "Lekcja Koreańskiego");
+        loadFXMLWindow("LessonUiKR.fxml", "Lekcja Koreańskiego");
     }
 
     @FXML
