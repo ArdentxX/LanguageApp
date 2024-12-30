@@ -1,116 +1,484 @@
 [
     {
         "id": 1,
-        "question": "Kot",
+        "question": "Mama",
         "type": "choice",
-        "options": ["dog", "cat", "bird"],
-        "correctanswer": "cat",
+        "options": ["Mother", "Father", "Sister"],
+        "correctanswer": "Mother",
         "category": "Vocabulary"
     },
     {
         "id": 2,
-        "question": "Dzień Dobry",
-        "type": "writting",
-        "correctanswer": "Good Morning",
-        "category": "Grammar"
+        "question": "Tata",
+        "type": "choice",
+        "options": ["Brother", "Father", "Uncle"],
+        "correctanswer": "Father",
+        "category": "Vocabulary"
     },
     {
         "id": 3,
-        "question": "Dom",
+        "question": "Dzień dobry",
         "type": "choice",
-        "options": ["house", "car", "tree"],
-        "correctanswer": "house",
-        "category": "Vocabulary"
+        "options": ["Good Morning", "Good Night", "Hello"],
+        "correctanswer": "Good Morning",
+        "category": "Greetings"
     },
     {
         "id": 4,
-        "question": "Jabłko",
+        "question": "Cześć",
         "type": "choice",
-        "options": ["banana", "apple", "grape"],
-        "correctanswer": "apple",
-        "category": "Vocabulary"
+        "options": ["Hello", "Goodbye", "Thank you"],
+        "correctanswer": "Hello",
+        "category": "Greetings"
     },
     {
         "id": 5,
-        "question": "Dobranoc",
-        "type": "writting",
-        "correctanswer": "Good Night",
-        "category": "Grammar"
-    },
-    {
-        "id": 6,
-        "question": "Czy możesz mi pomóc?",
-        "type": "writting",
-        "correctanswer": "Can you help me?",
-        "category": "Grammar"
-    },
-    {
-        "id": 7,
-        "question": "Pies",
+        "question": "Babcia",
         "type": "choice",
-        "options": ["dog", "cat", "mouse"],
-        "correctanswer": "dog",
+        "options": ["Grandmother", "Aunt", "Sister"],
+        "correctanswer": "Grandmother",
         "category": "Vocabulary"
     },
     {
-        "id": 8,
-        "question": "Książka",
+        "id": 6,
+        "question": "Dziadek",
         "type": "choice",
-        "options": ["book", "pen", "paper"],
-        "correctanswer": "book",
+        "options": ["Grandfather", "Cousin", "Brother"],
+        "correctanswer": "Grandfather",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 7,
+        "question": "Dobranoc",
+        "type": "choice",
+        "options": ["Good Night", "Good Morning", "Good Evening"],
+        "correctanswer": "Good Night",
+        "category": "Greetings"
+    },
+    {
+        "id": 8,
+        "question": "Siostra",
+        "type": "choice",
+        "options": ["Sister", "Mother", "Aunt"],
+        "correctanswer": "Sister",
         "category": "Vocabulary"
     },
     {
         "id": 9,
-        "question": "Zielony",
+        "question": "Brat",
         "type": "choice",
-        "options": ["red", "green", "blue"],
-        "correctanswer": "green",
+        "options": ["Brother", "Father", "Uncle"],
+        "correctanswer": "Brother",
         "category": "Vocabulary"
     },
     {
         "id": 10,
-        "question": "Dziękuję",
-        "type": "writting",
-        "correctanswer": "Thank you",
-        "category": "Grammar"
+        "question": "Zielony",
+        "type": "choice",
+        "options": ["Green", "Red", "Blue"],
+        "correctanswer": "Green",
+        "category": "Colors"
     },
     {
         "id": 11,
-        "question": "Proszę",
-        "type": "writting",
-        "correctanswer": "Please",
-        "category": "Grammar"
+        "question": "Niebieski",
+        "type": "choice",
+        "options": ["Blue", "Yellow", "Black"],
+        "correctanswer": "Blue",
+        "category": "Colors"
     },
     {
         "id": 12,
-        "question": "Rzeka",
+        "question": "Czerwony",
         "type": "choice",
-        "options": ["lake", "river", "sea"],
-        "correctanswer": "river",
-        "category": "Vocabulary"
+        "options": ["Red", "Orange", "Pink"],
+        "correctanswer": "Red",
+        "category": "Colors"
     },
     {
         "id": 13,
-        "question": "Woda",
+        "question": "Dziękuję",
         "type": "choice",
-        "options": ["water", "juice", "milk"],
-        "correctanswer": "water",
-        "category": "Vocabulary"
+        "options": ["Thank you", "Please", "Sorry"],
+        "correctanswer": "Thank you",
+        "category": "Greetings"
     },
     {
         "id": 14,
-        "question": "Dziecko",
+        "question": "Proszę",
         "type": "choice",
-        "options": ["child", "parent", "teacher"],
-        "correctanswer": "child",
-        "category": "Vocabulary"
+        "options": ["Please", "Thank you", "Goodbye"],
+        "correctanswer": "Please",
+        "category": "Greetings"
     },
     {
         "id": 15,
-        "question": "Gdzie jest toaleta?",
-        "type": "writting",
-        "correctanswer": "Where is the toilet?",
-        "category": "Grammar"
+        "question": "Czarny",
+        "type": "choice",
+        "options": ["Black", "White", "Gray"],
+        "correctanswer": "Black",
+        "category": "Colors"
+    },
+    {
+        "id": 16,
+        "question": "Wujek",
+        "type": "choice",
+        "options": ["Uncle", "Father", "Grandfather"],
+        "correctanswer": "Uncle",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 17,
+        "question": "Ciocia",
+        "type": "choice",
+        "options": ["Aunt", "Mother", "Grandmother"],
+        "correctanswer": "Aunt",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 18,
+        "question": "Żółty",
+        "type": "choice",
+        "options": ["Yellow", "Blue", "Orange"],
+        "correctanswer": "Yellow",
+        "category": "Colors"
+    },
+    {
+        "id": 19,
+        "question": "Różowy",
+        "type": "choice",
+        "options": ["Pink", "Purple", "Red"],
+        "correctanswer": "Pink",
+        "category": "Colors"
+    },
+    {
+        "id": 20,
+        "question": "Witaj",
+        "type": "choice",
+        "options": ["Welcome", "Goodbye", "Sorry"],
+        "correctanswer": "Welcome",
+        "category": "Greetings"
+    },
+    {
+        "id": 21,
+        "question": "Dziecko",
+        "type": "choice",
+        "options": ["Child", "Parent", "Teacher"],
+        "correctanswer": "Child",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 22,
+        "question": "Pomarańczowy",
+        "type": "choice",
+        "options": ["Orange", "Red", "Yellow"],
+        "correctanswer": "Orange",
+        "category": "Colors"
+    },
+    {
+        "id": 23,
+        "question": "Rodzina",
+        "type": "choice",
+        "options": ["Family", "Friend", "Neighbor"],
+        "correctanswer": "Family",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 24,
+        "question": "Szary",
+        "type": "choice",
+        "options": ["Gray", "Black", "White"],
+        "correctanswer": "Gray",
+        "category": "Colors"
+    },
+    {
+        "id": 25,
+        "question": "Przyjaciel",
+        "type": "choice",
+        "options": ["Friend", "Family", "Brother"],
+        "correctanswer": "Friend",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 26,
+        "question": "Kuzyn",
+        "type": "choice",
+        "options": ["Cousin", "Brother", "Uncle"],
+        "correctanswer": "Cousin",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 27,
+        "question": "Biały",
+        "type": "choice",
+        "options": ["White", "Black", "Gray"],
+        "correctanswer": "White",
+        "category": "Colors"
+    },
+    {
+        "id": 28,
+        "question": "Siostrzeniec",
+        "type": "choice",
+        "options": ["Nephew", "Uncle", "Brother"],
+        "correctanswer": "Nephew",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 29,
+        "question": "Siostrzenica",
+        "type": "choice",
+        "options": ["Niece", "Aunt", "Sister"],
+        "correctanswer": "Niece",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 30,
+        "question": "Dziękuję bardzo",
+        "type": "choice",
+        "options": ["Thank you very much", "Goodbye", "Please"],
+        "correctanswer": "Thank you very much",
+        "category": "Greetings"
+    },
+    {
+        "id": 31,
+        "question": "Mother",
+        "type": "choice",
+        "options": ["Mama", "Tata", "Siostra"],
+        "correctanswer": "Mama",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 32,
+        "question": "Father",
+        "type": "choice",
+        "options": ["Brat", "Tata", "Wujek"],
+        "correctanswer": "Tata",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 33,
+        "question": "Good Morning",
+        "type": "choice",
+        "options": ["Dzień dobry", "Dobranoc", "Cześć"],
+        "correctanswer": "Dzień dobry",
+        "category": "Greetings"
+    },
+    {
+        "id": 34,
+        "question": "Hello",
+        "type": "choice",
+        "options": ["Cześć", "Do widzenia", "Dziękuję"],
+        "correctanswer": "Cześć",
+        "category": "Greetings"
+    },
+    {
+        "id": 35,
+        "question": "Grandmother",
+        "type": "choice",
+        "options": ["Babcia", "Ciocia", "Siostra"],
+        "correctanswer": "Babcia",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 36,
+        "question": "Grandfather",
+        "type": "choice",
+        "options": ["Dziadek", "Kuzyn", "Brat"],
+        "correctanswer": "Dziadek",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 37,
+        "question": "Good Night",
+        "type": "choice",
+        "options": ["Dobranoc", "Dzień dobry", "Dobry wieczór"],
+        "correctanswer": "Dobranoc",
+        "category": "Greetings"
+    },
+    {
+        "id": 38,
+        "question": "Sister",
+        "type": "choice",
+        "options": ["Siostra", "Mama", "Ciocia"],
+        "correctanswer": "Siostra",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 39,
+        "question": "Brother",
+        "type": "choice",
+        "options": ["Brat", "Tata", "Wujek"],
+        "correctanswer": "Brat",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 40,
+        "question": "Green",
+        "type": "choice",
+        "options": ["Zielony", "Czerwony", "Niebieski"],
+        "correctanswer": "Zielony",
+        "category": "Colors"
+    },
+    {
+        "id": 41,
+        "question": "Blue",
+        "type": "choice",
+        "options": ["Niebieski", "Żółty", "Czarny"],
+        "correctanswer": "Niebieski",
+        "category": "Colors"
+    },
+    {
+        "id": 42,
+        "question": "Red",
+        "type": "choice",
+        "options": ["Czerwony", "Pomarańczowy", "Różowy"],
+        "correctanswer": "Czerwony",
+        "category": "Colors"
+    },
+    {
+        "id": 43,
+        "question": "Thank you",
+        "type": "choice",
+        "options": ["Dziękuję", "Proszę", "Przepraszam"],
+        "correctanswer": "Dziękuję",
+        "category": "Greetings"
+    },
+    {
+        "id": 44,
+        "question": "Please",
+        "type": "choice",
+        "options": ["Proszę", "Dziękuję", "Do widzenia"],
+        "correctanswer": "Proszę",
+        "category": "Greetings"
+    },
+    {
+        "id": 45,
+        "question": "Black",
+        "type": "choice",
+        "options": ["Czarny", "Biały", "Szary"],
+        "correctanswer": "Czarny",
+        "category": "Colors"
+    },
+    {
+        "id": 46,
+        "question": "Uncle",
+        "type": "choice",
+        "options": ["Wujek", "Tata", "Dziadek"],
+        "correctanswer": "Wujek",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 47,
+        "question": "Aunt",
+        "type": "choice",
+        "options": ["Ciocia", "Mama", "Babcia"],
+        "correctanswer": "Ciocia",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 48,
+        "question": "Yellow",
+        "type": "choice",
+        "options": ["Żółty", "Niebieski", "Pomarańczowy"],
+        "correctanswer": "Żółty",
+        "category": "Colors"
+    },
+    {
+        "id": 49,
+        "question": "Pink",
+        "type": "choice",
+        "options": ["Różowy", "Fioletowy", "Czerwony"],
+        "correctanswer": "Różowy",
+        "category": "Colors"
+    },
+    {
+        "id": 50,
+        "question": "Welcome",
+        "type": "choice",
+        "options": ["Witaj", "Do widzenia", "Przepraszam"],
+        "correctanswer": "Witaj",
+        "category": "Greetings"
+    },
+    {
+        "id": 51,
+        "question": "Child",
+        "type": "choice",
+        "options": ["Dziecko", "Rodzic", "Nauczyciel"],
+        "correctanswer": "Dziecko",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 52,
+        "question": "Orange",
+        "type": "choice",
+        "options": ["Pomarańczowy", "Czerwony", "Żółty"],
+        "correctanswer": "Pomarańczowy",
+        "category": "Colors"
+    },
+    {
+        "id": 53,
+        "question": "Family",
+        "type": "choice",
+        "options": ["Rodzina", "Przyjaciel", "Sąsiad"],
+        "correctanswer": "Rodzina",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 54,
+        "question": "Gray",
+        "type": "choice",
+        "options": ["Szary", "Czarny", "Biały"],
+        "correctanswer": "Szary",
+        "category": "Colors"
+    },
+    {
+        "id": 55,
+        "question": "Friend",
+        "type": "choice",
+        "options": ["Przyjaciel", "Rodzina", "Brat"],
+        "correctanswer": "Przyjaciel",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 56,
+        "question": "Cousin",
+        "type": "choice",
+        "options": ["Kuzyn", "Brat", "Wujek"],
+        "correctanswer": "Kuzyn",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 57,
+        "question": "White",
+        "type": "choice",
+        "options": ["Biały", "Czarny", "Szary"],
+        "correctanswer": "Biały",
+        "category": "Colors"
+    },
+    {
+        "id": 58,
+        "question": "Nephew",
+        "type": "choice",
+        "options": ["Siostrzeniec", "Wujek", "Brat"],
+        "correctanswer": "Siostrzeniec",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 59,
+        "question": "Niece",
+        "type": "choice",
+        "options": ["Siostrzenica", "Ciocia", "Siostra"],
+        "correctanswer": "Siostrzenica",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 60,
+        "question": "Thank you very much",
+        "type": "choice",
+        "options": ["Dziękuję bardzo", "Do widzenia", "Proszę"],
+        "correctanswer": "Dziękuję bardzo",
+        "category": "Greetings"
     }
+
 ]
+
