@@ -136,7 +136,7 @@ public class LessonController {
         // Ustawienie sceny i pokazanie nowego okna
         stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        stage.setTitle("Stats");
+        stage.setTitle("Statystyki");
         stage.setScene(scene);
         stage.show();
     }

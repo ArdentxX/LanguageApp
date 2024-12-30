@@ -28,6 +28,9 @@ public class HelloController {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    @FXML
+    private Label LoginLabel;
+
 
     @FXML
 
@@ -36,8 +39,9 @@ public class HelloController {
     public void onZalogujButton(ActionEvent actionEvent) throws IOException {
         String username = loginTextField.getText();
         String password = hasloTextField.getText();
+        int loginresult = login.loginUser(username, password);
 
-        if (login.loginUser(username, password) >= 0) {
+        if ( loginresult >= 0) {
             // Załaduj scenę tylko raz
             FXMLLoader loader = new FXMLLoader(getClass().getResource("loggedIn.fxml"));
             Parent root = loader.load(); // Ładowanie FXML
@@ -49,15 +53,28 @@ public class HelloController {
             // Zmień scenę
             Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
-            stage.setTitle("Stats");
+            stage.setTitle("Statystyki");
             stage.setScene(scene);
             stage.show();
+        }
+        else if (loginresult == -2) {
+            LoginLabel.setText("Nie znaleziono użytkownika!");
+        }
+        else {
+            LoginLabel.setText("Błędne hasło");
         }
     }
     //rejestracja
     public void onRejestrujButton(ActionEvent actionEvent) {
         String username=(loginTextField.getText());
         String password=(hasloTextField.getText());
-        login.registerUser(username,password);
+        int x=login.registerUser(username,password);
+
+        if(x==-1){
+            LoginLabel.setText("Nazwa zajęta!");
+        }
+        else{
+            LoginLabel.setText("Konto utworzono poprawnie!");
+        }
     }
 }

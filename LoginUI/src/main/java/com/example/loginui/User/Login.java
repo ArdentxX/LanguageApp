@@ -44,7 +44,6 @@ public class Login {
             user=new User(username,password,0,0,0,0,0,0);
             userExists = users.stream().anyMatch(u -> u.getUsername().equals(user.getUsername()));
             if(userExists) {
-                System.out.println("Nazwa zajeta!");
                 return -1;
             }
 
@@ -52,7 +51,6 @@ public class Login {
             users.add(user);
             // Serializuj listę użytkowników i zapisz do pliku
             mapper.writeValue(file, users);
-            System.out.println("Konto utworzono poprawnie!");
         } catch (IOException e) {
             System.err.println("Wystąpił błąd podczas zapisywania danych: " + e.getMessage());
         }
@@ -68,15 +66,12 @@ public class Login {
             for (User u : users) {
                 if (u.getUsername().equals(username)) {
                     if (u.getPassword().equals(password)) {
-                        System.out.println("Zalogowano poprawnie!");
                         currentUser = u;
                         return 0;
                     }
-                    System.out.println("Bledne haslo");
                     return -1;
                 }
             }
-            System.out.println("Nie znaleziono uzytkownika!");
             return -2;
         } catch (IOException e) {
             throw new RuntimeException("Wystąpił błąd podczas logowania: " + e.getMessage());
