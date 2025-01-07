@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+'log in
+User -> Front : Login request
+Front -> Back: Login request
+Back -> Database: Login credentials check
+Back ->Front: Login result
+Front->User: Login result
+
+'register
+ User -> Front : Register request
+ Front -> Back: Register request
+ Back -> Database: Username availability check
+ Back ->Front: Register result
+ Front->User: Register result
+
+
+@enduml

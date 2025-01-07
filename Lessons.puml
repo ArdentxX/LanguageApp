@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+User -> Front:  Lesson request
+Front -> Back: Lesson request
+Back->DB: Request questions
+DB->Back: Send questions
+Back->Front: Generate lesson
+Front->User: Begin lesson
+
+User->Front: Send answer
+Front->Back: Request answer check
+Back->DB: Check answer
+DB->Back: Send response
+Back->Front: Send response
+Front->User: Send response
+
+'user stats output
+Front->Back: Request progress information
+Back->DB: Get progress information
+Back->Front: Send progress information
+
+@enduml
