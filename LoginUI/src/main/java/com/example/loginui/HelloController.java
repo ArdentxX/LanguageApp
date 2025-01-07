@@ -15,19 +15,11 @@ import java.io.IOException;
 
 public class HelloController {
     @FXML
-    public TextField currentUserTextField;
-    @FXML
     private TextField loginTextField;
     @FXML
     private TextField hasloTextField;
     //utworzenie obiektu klasy login
     Login login= new Login();
-    @FXML
-    private Label welcomeText;
-
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
     @FXML
     private Label LoginLabel;
 
@@ -41,7 +33,7 @@ public class HelloController {
         String password = hasloTextField.getText();
         int loginresult = login.loginUser(username, password);
 
-        if(username==""||password==""){
+        if(username.isEmpty()||password.isEmpty()){
             LoginLabel.setText("Haslo ani nazwa nie mogą być puste!");
             return;
         }
@@ -76,7 +68,7 @@ public class HelloController {
         String password=(hasloTextField.getText());
         int x=login.registerUser(username,password);
 
-        if(username==""||password==""){
+        if(username.isEmpty()||password.isEmpty()){
             LoginLabel.setText("Haslo ani nazwa nie mogą być puste!");
             return;
         }
