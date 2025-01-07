@@ -41,6 +41,11 @@ public class HelloController {
         String password = hasloTextField.getText();
         int loginresult = login.loginUser(username, password);
 
+        if(username==""||password==""){
+            LoginLabel.setText("Haslo ani nazwa nie mogą być puste!");
+            return;
+        }
+
         if ( loginresult >= 0) {
             // Załaduj scenę tylko raz
             FXMLLoader loader = new FXMLLoader(getClass().getResource("loggedIn.fxml"));
@@ -69,6 +74,12 @@ public class HelloController {
         String username=(loginTextField.getText());
         String password=(hasloTextField.getText());
         int x=login.registerUser(username,password);
+
+        if(username==""||password==""){
+            LoginLabel.setText("Haslo ani nazwa nie mogą być puste!");
+            return;
+        }
+
 
         if(x==-1){
             LoginLabel.setText("Nazwa zajęta!");

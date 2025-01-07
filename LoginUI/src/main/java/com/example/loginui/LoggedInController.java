@@ -16,6 +16,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import static java.lang.Math.round;
+
 public class LoggedInController extends HelloController {
     @FXML
     public Label usernameLabel;
@@ -57,12 +59,12 @@ public class LoggedInController extends HelloController {
         if (currentUser.getCorrectEnglishAnswer() == 0 && currentUser.getIncorrectEnglishAnswer() == 0) {
             percentageEngLabel.setText("0");
         } else {
-            percentageEngLabel.setText(String.valueOf(100 * currentUser.getCorrectEnglishAnswer() / (currentUser.getCorrectEnglishAnswer() + currentUser.getIncorrectEnglishAnswer())) + "%");
+            percentageEngLabel.setText(String.valueOf(round(100 * currentUser.getCorrectEnglishAnswer() / (currentUser.getCorrectEnglishAnswer() + currentUser.getIncorrectEnglishAnswer()))) + "%");
         }
         if (currentUser.getCorrectKoreanAnswer() == 0 && currentUser.getIncorrectKoreanAnswer() == 0) {
             percentageKorLabel.setText("0");
         }else {
-            percentageKorLabel.setText(String.valueOf(100 * currentUser.getCorrectKoreanAnswer() / (currentUser.getIncorrectKoreanAnswer() + currentUser.getCorrectKoreanAnswer())) + "%");
+            percentageKorLabel.setText(String.valueOf(round(100 * currentUser.getCorrectKoreanAnswer() / (currentUser.getIncorrectKoreanAnswer() + currentUser.getCorrectKoreanAnswer()))) + "%");
         }
         this.currentUser = currentUser;
     }
@@ -126,7 +128,7 @@ public class LoggedInController extends HelloController {
         if (user.getCorrectEnglishAnswer() == 0 && user.getIncorrectEnglishAnswer() == 0) {
             percentageEngLabel.setText("0");
         } else {
-            percentageEngLabel.setText(String.valueOf(100*user.getCorrectEnglishAnswer() / (user.getCorrectEnglishAnswer() + user.getIncorrectEnglishAnswer()))+"%");
+            percentageEngLabel.setText(String.valueOf(round(100*user.getCorrectEnglishAnswer() / (user.getCorrectEnglishAnswer() + user.getIncorrectEnglishAnswer())))+"%");
             updateUserValue(String.valueOf(user.getUsername()),"correctEnglishAnswer",user.getCorrectEnglishAnswer());
             updateUserValue(String.valueOf(user.getUsername()),"incorrectEnglishAnswer",user.getIncorrectEnglishAnswer());
         }
@@ -134,7 +136,7 @@ public class LoggedInController extends HelloController {
         if (user.getCorrectKoreanAnswer() == 0 && user.getIncorrectKoreanAnswer() == 0) {
             percentageKorLabel.setText("0");
         } else {
-            percentageKorLabel.setText(String.valueOf(100*user.getCorrectKoreanAnswer() / (user.getIncorrectKoreanAnswer() + user.getCorrectKoreanAnswer()))+"%");
+            percentageKorLabel.setText(String.valueOf(round(100*user.getCorrectKoreanAnswer() / (user.getIncorrectKoreanAnswer() + user.getCorrectKoreanAnswer())))+"%");
             updateUserValue(String.valueOf(user.getUsername()),"correctKoreanAnswer",user.getCorrectKoreanAnswer());
             updateUserValue(String.valueOf(user.getUsername()),"incorrectKoreanAnswer",user.getIncorrectKoreanAnswer());
         }
