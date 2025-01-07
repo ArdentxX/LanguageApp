@@ -48,6 +48,7 @@ public class LoggedInController extends HelloController {
         Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }
@@ -85,6 +86,7 @@ public class LoggedInController extends HelloController {
 
             closeCurrentWindow();
             Stage stage = new Stage();
+            stage.setResizable(false);
             stage.setTitle("Lekcja Koreańskiego");
             stage.setScene(new Scene(root));
             stage.show();
@@ -104,6 +106,7 @@ public class LoggedInController extends HelloController {
 
             closeCurrentWindow();
             Stage stage = new Stage();
+            stage.setResizable(false);
             stage.setTitle("Lekcja Angielskiego");
             stage.setScene(new Scene(root));
             stage.show();
